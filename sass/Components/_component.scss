@@ -1,25 +1,31 @@
+/*-----------------------------GLOBAL COMPONENTS-------------------------*/
 .container{
     max-width: 1280px;
     margin: 0 auto;
 }
 
-//button buy now
+/*-----------------------------COMPONENT-------------------------*/
+//Nut button bynow
+
+//btn1 cho phần carousel trang index
 .btnByNow1 {
     width: 175px;
     height: 64px;
     background-color: var(--bg-button-primary);
     @extend .fs-2;
-    @extend .fw-line;
+    @extend .fw-extraLight;
     color: var(--text-color-primary);
     border: none;
     text-align: center;
 }
+
+//btn2 cho phần detail products
 .btnByNow2 {
     width: 175px;
     height: 64px;
     background-color: var(--bg-button-secondary);
     @extend .fs-2;
-    @extend .fw-line;
+    @extend .fw-extraLight;
     color: var(--text-color-primary);
     border: none;
     text-align: center;

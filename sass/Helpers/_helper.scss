@@ -1,4 +1,4 @@
-// COLOR
+/*-----------------------------COLOR-------------------------*/
 $c0-text-primary: #000;
 $c0-text-secondary:#1ED90E;
 $c0-text-third:#FC0303;
@@ -35,7 +35,7 @@ body{
     --linear-bg-secondary:#{$linear1-bg-secondary};
 }
 
-// font size
+/*-----------------------------FONT SIZE-------------------------*/
 
 $arrayFontSize:("0":16px,"1":20px,"2":24px,"3":30px,"4":40px,"5":50x,"6":60px);
 @each $key,$value in $arrayFontSize{
@@ -44,8 +44,8 @@ $arrayFontSize:("0":16px,"1":20px,"2":24px,"3":30px,"4":40px,"5":50x,"6":60px);
     }
 }
 
-//font weight
-$arrayWeigh:("line":200,"seminormal":300,"normal":400,"semiBold":500,"bold":600,"bolder":700);
+/*-----------------------------FONT WEIGHT-------------------------*/
+$arrayWeigh:("extraLight":200,"light":300,"normal":400,"semiBold":500,"bold":600,"bolder":700,"extraBold":800);
 
 @each $key,$value in $arrayWeigh{
     .fw-#{$key}{
@@ -54,9 +54,18 @@ $arrayWeigh:("line":200,"seminormal":300,"normal":400,"semiBold":500,"bold":600,
 }
 
 
-//mixin
+/*-----------------------------MIXIN-------------------------*/
+//mixin style cho text
 @mixin styleText($fs,$fw,$c){
     font-size: $fs;
     font-weight: $fw;
     color:$c;
+}
+
+//mixin style cho box
+@mixin boxStyle($bd,$br,$bg,$bs){
+    border: $bd;
+    border-radius: $br;
+    background: $bg;
+    box-shadow: $bs;
 }

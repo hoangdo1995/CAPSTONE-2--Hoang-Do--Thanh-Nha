@@ -5,6 +5,7 @@
   font-family: "Inter", "Sans-serif";
 }
 
+/*-----------------------------COLOR-------------------------*/
 body {
   --text-color-primary:#000;
   --text-color-light:#fff;
@@ -17,6 +18,7 @@ body {
   --linear-bg-secondary:linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
 }
 
+/*-----------------------------FONT SIZE-------------------------*/
 .fs-0 {
   font-size: 16px;
 }
@@ -45,11 +47,12 @@ body {
   font-size: 60px;
 }
 
-.fw-line, .btnByNow2, .btnByNow1 {
+/*-----------------------------FONT WEIGHT-------------------------*/
+.fw-extraLight, .btnByNow2, .btnByNow1 {
   font-weight: 200;
 }
 
-.fw-seminormal {
+.fw-light {
   font-weight: 300;
 }
 
@@ -69,11 +72,18 @@ body {
   font-weight: 700;
 }
 
+.fw-extraBold {
+  font-weight: 800;
+}
+
+/*-----------------------------MIXIN-------------------------*/
+/*-----------------------------GLOBAL COMPONENTS-------------------------*/
 .container {
   max-width: 1280px;
   margin: 0 auto;
 }
 
+/*-----------------------------COMPONENT-------------------------*/
 .btnByNow1 {
   width: 175px;
   height: 64px;
