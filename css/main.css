@@ -1,3 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Sans-serif";
+}
+
+body {
+  --text-color-primary:#000;
+  --text-color-light:#fff;
+  --text-color-grey:#CBC9C9;
+  --bg-color-primary:#FFFCFC;
+  --bg-color-secondary:#F5F5F5;
+  --bg-button-primary:#F8B653;
+  --bg-button-secondary:#E1B067;
+  --linear-bg-primary:linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
+  --linear-bg-secondary:linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+}
+
+.fs-0 {
+  font-size: 16px;
+}
+
+.fs-1 {
+  font-size: 20px;
+}
+
+.fs-2, .btnByNow2, .btnByNow1 {
+  font-size: 24px;
+}
+
+.fs-3 {
+  font-size: 30px;
+}
+
+.fs-4 {
+  font-size: 40px;
+}
+
+.fs-5 {
+  font-size: 50x;
+}
+
+.fs-6 {
+  font-size: 60px;
+}
+
+.fw-line, .btnByNow2, .btnByNow1 {
+  font-weight: 200;
+}
+
+.fw-seminormal {
+  font-weight: 300;
+}
+
+.fw-normal {
+  font-weight: 400;
+}
+
+.fw-semiBold {
+  font-weight: 500;
+}
+
+.fw-bold {
+  font-weight: 600;
+}
+
+.fw-bolder {
+  font-weight: 700;
+}
+
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.btnByNow1 {
+  width: 175px;
+  height: 64px;
+  background-color: var(--bg-button-primary);
+  color: var(--text-color-primary);
+  border: none;
+  text-align: center;
+}
+
+.btnByNow2 {
+  width: 175px;
+  height: 64px;
+  background-color: var(--bg-button-secondary);
+  color: var(--text-color-primary);
+  border: none;
+  text-align: center;
 }

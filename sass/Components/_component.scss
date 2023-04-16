@@ -1,0 +1,29 @@
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+//button buy now
+.btnByNow1 {
+    width: 175px;
+    height: 64px;
+    background-color: var(--bg-button-primary);
+    @extend .fs-2;
+    @extend .fw-line;
+    color: var(--text-color-primary);
+    border: none;
+    text-align: center;
+}
+.btnByNow2 {
+    width: 175px;
+    height: 64px;
+    background-color: var(--bg-button-secondary);
+    @extend .fs-2;
+    @extend .fw-line;
+    color: var(--text-color-primary);
+    border: none;
+    text-align: center;
+}
+
+
+

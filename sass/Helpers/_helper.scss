@@ -1,0 +1,62 @@
+// COLOR
+$c0-text-primary: #000;
+$c0-text-secondary:#1ED90E;
+$c0-text-third:#FC0303;
+$c0-text-grey: #CBC9C9;
+$c0-text-light:#fff;
+
+$c0-bg-primary:#FFFCFC;
+$c0-bg-secondary:#F5F5F5;
+
+$c1-bg-primary:#F8B653;
+$c1-bg-secondary:#E1B067;
+
+$linear1-bg-primary:linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
+$linear1-bg-secondary:linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+
+body{
+    // text color
+    --text-color-primary:#{$c0-text-primary};
+    --text-color-light:#{$c0-text-light};
+    --text-color-grey:#{$c0-text-grey};
+
+    //background color
+    --bg-color-primary:#{$c0-bg-primary};
+    --bg-color-secondary:#{$c0-bg-secondary};
+
+
+    //button background
+    --bg-button-primary:#{$c1-bg-primary};
+    --bg-button-secondary:#{$c1-bg-secondary};
+    
+
+    // background linear
+    --linear-bg-primary:#{$linear1-bg-primary};
+    --linear-bg-secondary:#{$linear1-bg-secondary};
+}
+
+// font size
+
+$arrayFontSize:("0":16px,"1":20px,"2":24px,"3":30px,"4":40px,"5":50x,"6":60px);
+@each $key,$value in $arrayFontSize{
+    .fs-#{$key}{
+        font-size: $value;
+    }
+}
+
+//font weight
+$arrayWeigh:("line":200,"seminormal":300,"normal":400,"semiBold":500,"bold":600,"bolder":700);
+
+@each $key,$value in $arrayWeigh{
+    .fw-#{$key}{
+        font-weight: $value;
+    }
+}
+
+
+//mixin
+@mixin styleText($fs,$fw,$c){
+    font-size: $fs;
+    font-weight: $fw;
+    color:$c;
+}
