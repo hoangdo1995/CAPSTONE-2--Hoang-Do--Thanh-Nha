@@ -30,19 +30,70 @@
                         </div>
                         <div class="description">
                             <p class="name">Product name</p>
-                            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, deleniti?</p>
-                            <button>Buy now</button>
+                            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, deleniti?
+                            </p>
+                            <button><span>Buy now</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="item-content">
+                        <div class="image">
+                            <img src="./images/shoeCarousel.png" alt="">
+                        </div>
+                        <div class="description">
+                            <p class="name">Product name</p>
+                            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, deleniti?
+                            </p>
+                            <button><span>Buy now</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="item-content">
+                        <div class="image">
+                            <img src="./images/shoeCarousel.png" alt="">
+                        </div>
+                        <div class="description">
+                            <p class="name">Product name</p>
+                            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, deleniti?
+                            </p>
+                            <button><span>Buy now</span></button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="owl-carousel"></div>
-            <div class="owl-carousel"></div>
+
         </div>
     </section>
     <!-- PRODUCTS -->
     <section class="products">
-
+        <div class="container">
+            <div class="product-title">
+                <p>Product Feature</p>
+            </div>
+            <div class="content">
+                <div class="content-container">
+                    <div class="product-item">
+                        <div class="item-container">
+                            <div class="item-infor">
+                                <div class="item-image">
+                                    <img src="./images/shoe2.png" alt="shose image">
+                                </div>
+                                <p class="item-name">Adidas Prophere</p>
+                                <p class="item-desc">Short description</p>
+                            </div>
+                            <div class="item-shopping">
+                                <button><span>Buy now</span></button>
+                                <div class="item-price">
+                                    <p class="price">$85</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- FOOTER -->
     <section class="footer">
@@ -60,19 +111,26 @@
         integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- carousel -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./Libraries/OwlCarousel2/js/owl.carousel.min.js"></script>
     <!-- ApiConnector -->
     <script src="./javascripts/ApiConnector/connector.js"></script>
     <script>
         // Khởi tạo wow js
-        new WOW().init();
+        new WOW({
+            live:true
+        }).init();
         // Khởi tạo carousel2
         $('.owl-carousel').owlCarousel({
             loop: true,
             margin: 10,
             nav: true,
-            items:1,
+            items: 1,
+            autoplay:true,
+            autoplayTimeout:5000,
+            autoplayHoverPause:true
         })
     </script>
     <script src="./javascripts/main.js"></script>
