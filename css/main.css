@@ -14,6 +14,7 @@ body {
   --bg-color-secondary:#F5F5F5;
   --bg-button-primary:#F8B653;
   --bg-button-secondary:#E1B067;
+  --bg-button-grey:#DEDDDC;
   --linear-bg-primary:linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
   --linear-bg-secondary:linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
 }
