@@ -43,6 +43,13 @@ $arrayFontSize:("0":16px,"1":20px,"2":24px,"3":30px,"4":40px,"5":50x,"6":60px);
         font-size: $value;
     }
 }
+$fs-0:16px; 
+$fs-1:20px;
+$fs-2:24px;
+$fs-3:30px;
+$fs-4:40px;
+$fs-5:50px;
+$fs-6:60px;
 
 /*-----------------------------FONT WEIGHT-------------------------*/
 $arrayWeigh:("extraLight":200,"light":300,"normal":400,"semiBold":500,"bold":600,"bolder":700,"extraBold":800);
@@ -52,6 +59,13 @@ $arrayWeigh:("extraLight":200,"light":300,"normal":400,"semiBold":500,"bold":600
         font-weight: $value;
     }
 }
+
+$fw-extraLight:200;
+$fw-light:300;
+$fw-normal:400;
+$fw-semiBold:500;$bold:600;
+$fw-bolder:700;
+$fw-extraBold:800;
 
 
 /*-----------------------------MIXIN-------------------------*/
