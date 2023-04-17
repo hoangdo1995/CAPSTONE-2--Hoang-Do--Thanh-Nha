@@ -1,5 +1,7 @@
+@import './libariesAniamtionButton';
+@import './animateCss';
 /*-----------------------------GLOBAL COMPONENTS-------------------------*/
-.container{
+.container {
     max-width: 1280px;
     margin: 0 auto;
 }
@@ -9,18 +11,22 @@
 
 //btn1 cho phần carousel trang index
 .btnByNow1 {
+    @extend .custom-btn;
+    @extend .btn-7;
     width: 175px;
     height: 64px;
     background-color: var(--bg-button-primary);
     @extend .fs-2;
     @extend .fw-extraLight;
-    color: var(--text-color-primary);
+    color: var(--text-color-light);
     border: none;
     text-align: center;
 }
 
 //btn2 cho phần detail products
 .btnByNow2 {
+    @extend .custom-btn;
+    @extend .btn-7;
     width: 175px;
     height: 64px;
     background-color: var(--bg-button-secondary);
@@ -30,6 +36,4 @@
     border: none;
     text-align: center;
 }
-
-
 
