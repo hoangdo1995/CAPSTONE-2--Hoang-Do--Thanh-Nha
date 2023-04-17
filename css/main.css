@@ -3990,8 +3990,14 @@ body .products .container .product-title {
   text-align: center;
   padding-bottom: 50px;
 }
+body .products .container .content .content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 body .products .container .content .content-container .product-item {
   width: 300px;
+  margin-top: 50px;
 }
 body .products .container .content .content-container .product-item .item-container {
   background-color: var(--bg-color-secondary);
@@ -4021,11 +4027,12 @@ body .products .container .content .content-container .product-item .item-contai
   display: flex;
 }
 body .products .container .content .content-container .product-item .item-container .item-shopping .item-price {
-  text-align: center;
   max-width: 100%;
   min-width: 42%;
-  background-color: aqua;
-  border: none;
+  background-color: var(--bg-button-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body .products .container .content .content-container .product-item .item-container .item-shopping .item-price .price {
   font-size: 24px;
