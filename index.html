@@ -10,8 +10,8 @@
     <!-- google font inter -->
     <link rel="stylesheet" href="./css/font.css">
     <!-- carousel 2 -->
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./Libraries/OwlCarousel2/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./Libraries/OwlCarousel2/css/owl.theme.default.min.css">
     <!-- animated -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
@@ -22,7 +22,22 @@
     <!-- CAROUSEL -->
     <section class="carousel">
         <div class="container">
-            <button class="btnByNow wow"><span>Buy now</span></button>
+            <div class="owl-carousel">
+                <div class="carousel-item">
+                    <div class="item-content">
+                        <div class="image">
+                            <img src="./images/shoeCarousel.png" alt="">
+                        </div>
+                        <div class="description">
+                            <p class="name">Product name</p>
+                            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, deleniti?</p>
+                            <button>Buy now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel"></div>
+            <div class="owl-carousel"></div>
         </div>
     </section>
     <!-- PRODUCTS -->
@@ -44,16 +59,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
         integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        new WOW().init();
-    </script>
     <!-- carousel -->
-    <script src="jquery.min.js"></script>
-    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./Libraries/OwlCarousel2/js/owl.carousel.min.js"></script>
     <!-- ApiConnector -->
     <script src="./javascripts/ApiConnector/connector.js"></script>
+    <script>
+        // Khởi tạo wow js
+        new WOW().init();
+        // Khởi tạo carousel2
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            items:1,
+        })
+    </script>
     <script src="./javascripts/main.js"></script>
-
 </body>
 
 </html>

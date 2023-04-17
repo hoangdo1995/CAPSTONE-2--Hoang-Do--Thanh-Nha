@@ -4,13 +4,39 @@
 
 body {
     
-    .header {
-    }
+    @import './Layouts/header';
 
     .carousel { 
+        .container{
+            .owl-carousel{
+                .carousel-item{
+                    background-image: url('../images/backgroundCarousel.png');
+                    .item-content{
+                        display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                        .image{
+
+                        }
+                        .description{
+                            .name{
+                                @include styleText($fs-4,$fw-light,var(--text-color-primary));
+                            }
+                            .content{
+                                @include styleText($fs-2,)
+                            }
+                            button{
+
+                            }
+                        }
+                    
+                    }
+                }
+            }
+        }
     }
 
     .product {}
 
-    .footer {}
+    @import './Layouts/footer';
 }
