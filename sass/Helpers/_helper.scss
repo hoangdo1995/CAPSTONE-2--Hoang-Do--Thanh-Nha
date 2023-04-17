@@ -10,6 +10,7 @@ $c0-bg-secondary:#F5F5F5;
 
 $c1-bg-primary:#F8B653;
 $c1-bg-secondary:#E1B067;
+$c2-bg-grey:#DEDDDC;
 
 $linear1-bg-primary:linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
 $linear1-bg-secondary:linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
@@ -28,6 +29,7 @@ body{
     //button background
     --bg-button-primary:#{$c1-bg-primary};
     --bg-button-secondary:#{$c1-bg-secondary};
+    --bg-button-grey:#{$c2-bg-grey};
     
 
     // background linear
