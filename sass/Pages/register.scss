@@ -1,5 +1,77 @@
-@import '../Layouts/header';
-//code phần body
+@import '../Bases/base';
+@import '../Helpers/_helper.scss';
+@import '../Components/component.scss';
 
 
-@import '../Layouts/footer';
+body {
+    @import '../Layouts/header';
+
+    .register {
+        .container {
+            background-color: var(--bg-color-primary);
+
+            .register-title {
+                .title {
+                    @include styleText($fs-4, $fw-normal, var(--text-color-primary));
+                    text-align: center;
+                    margin-top: 50px
+                }
+            }
+
+            .register-body {
+                @include styleText($fs-2, $fw-normal, var(--text-color-primary));
+
+                .register-form {
+                    padding: 0 100px;
+
+                    .form-content {
+                        display: flex;
+                        justify-content: space-around;
+
+                        .input-details {
+                            width: 100%;
+                            padding: 50px;
+
+                            .input-detail {
+                                margin: 30px 0;
+
+                                p {
+                                    transform: translateY(20px);
+                                    z-index: -1;
+                                }
+
+                                input {
+                                    width: 100%;
+                                    @include styleText($fs-2, $fw-normal, var(--text-color-primary));
+                                    border: none;
+                                    border-bottom: 3px solid #AE18E2;
+                                    padding: 5px 10px;
+
+                                    &:focus {
+                                        border: 0;
+                                        outline: none;
+                                        border-bottom: 3px solid #AE18E2;
+
+                                    }
+                                }
+                                
+                            }
+                            .input-detail.gender {
+                                display: flex;
+                                padding: 25px 0;
+                            }
+
+                        }
+
+                    }
+
+                    button {}
+                }
+            }
+        }
+    }
+
+
+
+    @import '../Layouts/footer';
+}

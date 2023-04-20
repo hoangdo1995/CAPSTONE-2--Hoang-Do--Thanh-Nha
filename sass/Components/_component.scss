@@ -21,6 +21,10 @@
     color: var(--text-color-light);
     border: none;
     text-align: center;
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
 }
 
 //btn2 cho phần detail products
@@ -35,6 +39,10 @@
     color: var(--text-color-primary);
     border: none;
     text-align: center;
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
 }
 
 //class cho wow
