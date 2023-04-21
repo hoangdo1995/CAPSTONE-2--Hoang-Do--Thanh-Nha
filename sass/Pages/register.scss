@@ -1,6 +1,6 @@
 @import '../Bases/base';
 @import '../Helpers/_helper.scss';
-@import '../Components/component.scss';
+@import '../Components/_component.scss';
 
 
 body {
@@ -21,23 +21,41 @@ body {
             .register-body {
                 @include styleText($fs-2, $fw-normal, var(--text-color-primary));
 
-                .register-form {
+                #register-form {
                     padding: 0 100px;
 
                     .form-content {
                         display: flex;
                         justify-content: space-around;
-
                         .input-details {
-                            width: 100%;
+                            min-width: 50%;
                             padding: 50px;
-
                             .input-detail {
                                 margin: 30px 0;
-
-                                p {
-                                    transform: translateY(20px);
-                                    z-index: -1;
+                                .input-tag{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    transform: translateY(35px);
+                                    transition: all .5s;
+                                    .input-name{
+                                        color:#4f4e50;
+                                        font-weight: $fw-bolder;
+                                        margin-bottom: 5px;
+                                    }
+                                    .alert-notify{
+                                        color:$c0-text-third;
+                                        font-size: $fs-0;
+                                        max-width: 70%;
+                                        text-align: right;
+                                    }
+                                    @media only screen and (max-width: 992px){
+                                        flex-direction: column;
+                                        width: 100%;
+                                        .alert-notify{
+                                            width: 100%;
+                                            text-align: left;
+                                        }
+                                    } 
                                 }
 
                                 input {
@@ -46,26 +64,74 @@ body {
                                     border: none;
                                     border-bottom: 3px solid #AE18E2;
                                     padding: 5px 10px;
-
+                                    transition: all .5s;
                                     &:focus {
                                         border: 0;
                                         outline: none;
                                         border-bottom: 3px solid #AE18E2;
-
+                                        box-shadow: 0px 0px 8px 5px rgba(174,24,226,0.3);
+                                        border-radius: 4px;
                                     }
+                                }   
+                                @media only screen and (max-width: 768px){
+                                    padding: 0;
                                 }
-                                
                             }
+                            
                             .input-detail.gender {
                                 display: flex;
                                 padding: 25px 0;
+                                justify-content: space-between;
+                                align-items: center;
+                                span{
+                                    font-weight: $fw-bolder;
+                                    color:#4f4e50;
+                                }
+                                input{
+                                    &:focus{
+                                        box-shadow: none;
+                                    }
+                                    
+                                }
+                                @media only screen and (max-width: 768px){
+                                    width: 70%;
+                                }
+                                     
                             }
+                            
+                            @media only screen and (max-width: 768px){
+                                padding: 0 20px;
+                                margin-bottom: 0;
+                                margin-top: 0;
+                                .input-detail:last-child{
+                                    margin-bottom: 0;
+                                }
 
+                            }
                         }
-
+                        @media only screen and (max-width: 768px){
+                            flex-direction: column;
+                            justify-content: start;
+                        }
                     }
-
-                    button {}
+                    button {
+                        @extend .custom-btn;
+                        @extend .btn-violet;
+                        background-color: #AE18E2;
+                        color: var(--text-color-light);
+                        font-size: $fs-3;
+                        font-weight: $fw-normal;
+                        width:290px ;
+                        height: 50px;
+                        transition: all .5s;
+                        margin-top: 20px;
+                    }
+                    @media only screen and (max-width: 992px){
+                        padding: 30px;
+                    }
+                    @media only screen and (max-width: 768px){
+                        padding: 0 10px;
+                    }
                 }
             }
         }
