@@ -2,6 +2,19 @@
 @import './Helpers/_helper.scss';
 @import './Components/_component.scss';
 
+@mixin footerItemStyle(){
+    ul{
+        
+        list-style: none;
+        font-size: 12px;
+        a{
+            text-decoration: none;
+            color: $c0-text-primary;
+        }
+    }
+}
+
+
 body {
     
     .header{
@@ -38,12 +51,11 @@ body {
                     }           
                 }
                 .login{
-                    // font-size: 16px;
-                    // margin-right: 30px;
-                    // font-weight: 300;
-                    // background-color: aqua;
-                    // @extend .animate__animated;
-                    // @extend .animate__backInRight;
+                    font-size: 16px;
+                    margin-right: 30px;
+                    font-weight: 300;
+                    @extend .animate__animated;
+                    @extend .animate__backInRight;
                 }
                 .register{
                     font-size: 16px;
@@ -57,11 +69,33 @@ body {
             width: 100%;
             background-color: $c0-text-light;
             .menu-container{
+                margin: 10px;
                 a{
+                    position: relative;
                     text-decoration: none;
-                    color: $c0-text-primary;
+                    color: $c0-text-primary-sub;
                     padding-right: 10px;
                     font-size: 20px;
+
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        background-color: $c0-text-primary;
+                        bottom: -10px;
+                        left: 0;
+                        width: 90%;
+                        transform: scaleX(0);
+                        height: 1px;
+                        transition: all 0.5s;
+                    }
+
+                    &:hover{
+                        &::after{
+                            transform: scaleX(1);
+                        }
+                        color: $c0-text-primary;
+                    }
                 }
             }
         }
@@ -75,9 +109,24 @@ body {
     .footer {
         .container{
             display: flex;
-            border: 1px solid red;
+            // border: 1px solid red;
             justify-content: space-between;
             padding: 0px 100px;
+            .get-help{
+                @include footerItemStyle();
+            }
+
+            .orders{
+                @include footerItemStyle();
+            }
+
+            .register{
+                // padding-right: 100px;
+                // border: 1px solid salmon;
+                width: 30%;
+                @include footerItemStyle();
+            }
         }
     }
 }
+
