@@ -1,0 +1,83 @@
+@mixin footerSubItemStyle(){
+    width: 32%;
+    ul{
+        
+        list-style: none;
+        font-size: 12px;
+        a{
+            text-decoration: none;
+            color: $c0-text-primary;
+        }
+    }
+}
+
+@mixin footerVerticalLine(){
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        display: block;
+        background-color: $c0-text-grey;
+        bottom: -10px;
+        left: -30px;
+        width: 1px;
+        height: 115%;
+    }
+}
+
+@mixin footerItemStyle($moreLink: false, $verticalLine: false){
+    
+    
+    @include footerSubItemStyle();
+    @if $moreLink{
+        a{
+            text-decoration: none;
+            font-size: 12px;
+            color: $c0-text-danger-emphasis;
+        }
+    }
+
+    @if $verticalLine{
+        @include footerVerticalLine();
+    }
+
+}
+
+
+@mixin footerComponent(){
+    .footer-container{
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 100px;
+    
+        .get-help{                
+            @include footerSubItemStyle();
+        }
+
+        .orders{
+            @include footerItemStyle($moreLink: false, $verticalLine: true);
+            width: 20%;
+        }
+
+        .register{
+            @include footerItemStyle($moreLink: true, $verticalLine: true);
+        }
+
+        .email-signup{
+            @include footerItemStyle($moreLink: true, $verticalLine: false);
+        }
+
+        .gift-cards{
+            @include footerItemStyle($moreLink: true, $verticalLine: true);
+            width: 20%;
+        }
+
+        .store-location{
+            @include footerItemStyle($moreLink: true, $verticalLine: true);
+            
+        }
+    }
+    .footer-container:nth-child(2){
+        background-color: $c0-text-grey-sub;
+    }
+}

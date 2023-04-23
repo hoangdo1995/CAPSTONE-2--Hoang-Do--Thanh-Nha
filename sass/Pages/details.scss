@@ -1,5 +1,19 @@
-@import '../Layouts/header';
-//code phần body
+@import '../Bases/_base.scss';
+@import '../Helpers/_helper.scss';
+@import '../Components/_component.scss';
+@import '../Layouts/_footer.scss';
+@import '../Layouts/_header.scss';
 
+body {
+    .header{
+        @include headerComponent();
+    }
 
-@import '../Layouts/footer';
+    .carousel{}
+
+    .product{}
+
+    .footer {
+        @include footerComponent();
+    }
+}

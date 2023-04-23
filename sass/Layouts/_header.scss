@@ -1,0 +1,84 @@
+@mixin headerComponent(){
+    background-color: $c0-text-primary;
+        margin-bottom: 100px;
+        .header-sub-container{
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            .logo{
+                margin-left: 50px;
+                img{
+                    position: absolute;
+                    width: 116px;
+                    height: 32px;
+                }
+            }
+            .user-item{
+                display: flex;
+                color: $c0-text-light;
+                align-items: center;
+                margin-right: 50px;
+                .shopping{
+                    font-size: 30px;   
+                    margin-right: 15px;   
+                    align-items: center;  
+                    position: relative;
+                    img{
+                        position: absolute;
+                        width: 31px;
+                        height: 31px;
+                        top: 3px;
+                        left: -30px;
+                    }           
+                }
+                .login{
+                    font-size: 16px;
+                    margin-right: 30px;
+                    font-weight: 300;
+                    @extend .animate__animated;
+                    @extend .animate__backInRight;
+                }
+                .register{
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .menu-item{
+            position: absolute;
+            width: 100%;
+            background-color: $c0-text-light;
+            margin-left: 50px;
+            .menu-container{
+                margin: 10px;
+                a{
+                    position: relative;
+                    text-decoration: none;
+                    color: $c0-text-primary-sub;
+                    padding-right: 10px;
+                    font-size: 20px;
+
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        background-color: $c0-text-primary;
+                        bottom: -10px;
+                        left: 0;
+                        width: 90%;
+                        transform: scaleX(0);
+                        height: 1px;
+                        transition: all 0.5s;
+                    }
+
+                    &:hover{
+                        &::after{
+                            transform: scaleX(1);
+                        }
+                        color: $c0-text-primary;
+                    }
+                }
+            }
+        }
+}
