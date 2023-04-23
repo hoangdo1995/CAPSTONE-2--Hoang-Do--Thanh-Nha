@@ -3963,6 +3963,12 @@ body .register .container .register-body #register-form button span:after {
   margin: 0 auto;
 }
 
+p {
+  overflow-wrap: break-word;
+  hyphens: auto;
+  vertical-align: middle;
+}
+
 /*-----------------------------COMPONENT-------------------------*/
 .btnByNow1 {
   width: 175px;
