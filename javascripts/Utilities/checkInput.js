@@ -112,9 +112,6 @@ function passwordConfirm(password,Confirm,name){
 }
 
 
-
-
-
 /**
  * hàm chuyển chuổi về sạng không dấu
  * @param {*} title 

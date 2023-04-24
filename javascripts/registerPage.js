@@ -28,7 +28,7 @@ document.querySelector('#register-form').onsubmit = function () {
                 id,
                 value
             } = input;
-            user[id] = value;
+            user[id] = value.trim();
         });
         let gender = document.querySelector('[name="gender"]').value;
         if (gender === 'true') {
