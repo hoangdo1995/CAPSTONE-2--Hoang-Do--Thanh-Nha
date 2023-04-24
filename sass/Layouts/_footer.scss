@@ -1,12 +1,17 @@
 @mixin footerSubItemStyle(){
     width: 32%;
+    h1{
+        margin-bottom: 5px;
+    }
     ul{
         
         list-style: none;
         font-size: 12px;
+        margin-bottom: 5px;
         a{
             text-decoration: none;
             color: $c0-text-primary;
+            
         }
     }
 }
@@ -45,6 +50,7 @@
 
 
 @mixin footerComponent(){
+    
     .footer-container{
         display: flex;
         justify-content: space-between;
@@ -56,7 +62,7 @@
 
         .orders{
             @include footerItemStyle($moreLink: false, $verticalLine: true);
-            width: 20%;
+            width: 25%;
         }
 
         .register{
@@ -69,7 +75,7 @@
 
         .gift-cards{
             @include footerItemStyle($moreLink: true, $verticalLine: true);
-            width: 20%;
+            width: 25%;
         }
 
         .store-location{
