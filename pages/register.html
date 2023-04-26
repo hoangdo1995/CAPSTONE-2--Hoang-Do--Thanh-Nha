@@ -35,22 +35,6 @@
                             </div>
                             <div class="input-detail">
                                 <div class="input-tag">
-                                    <p class="input-name">password</p>
-                                    <p class="alert-notify" id="password-error"></p>
-                                </div>
-                                <input type="password" id="password" name="password" >
-                            </div>
-                            <div class="input-detail">
-                                <div class="input-tag">
-                                    <p class="input-name">password confirm</p>
-                                    <p class="alert-notify" id="password-confirm-error"></p>
-                                </div>
-                                <input type="password" id="password_confirm" name="password-confirm">
-                            </div>
-                        </div>
-                        <div class="input-details">
-                            <div class="input-detail">
-                                <div class="input-tag">
                                     <p class="input-name">name</p>
                                     <p class="alert-notify" id="name-error"></p>
                                 </div>
@@ -62,6 +46,22 @@
                                     <p class="alert-notify" id="phone-error"></p>
                                 </div>
                                 <input type="text" id="phone" name="phone">
+                            </div>
+                        </div>
+                        <div class="input-details">
+                            <div class="input-detail">
+                                <div class="input-tag">
+                                    <p class="input-name">password</p>
+                                    <p class="alert-notify" id="password-error"></p>
+                                </div>
+                                <input type="password" id="password" name="password" >
+                            </div>
+                            <div class="input-detail">
+                                <div class="input-tag">
+                                    <p class="input-name">password confirm</p>
+                                    <p class="alert-notify" id="password-confirm-error"></p>
+                                </div>
+                                <input type="password" id="password_confirm" name="password-confirm">
                             </div>
                             <div class="input-detail gender">
                                 <span>Gender</span><input type="radio" name="gender" value="true" checked>Male <input type="radio" name="gender" value="false"> Female
@@ -87,15 +87,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.5/axios.min.js"
         integrity="sha512-nnNHpffPSgINrsR8ZAIgFUIMexORL5tPwsfktOTxVYSv+AUAILuFYWES8IHl+hhIhpFGlKvWFiz9ZEusrPcSBQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"> </script>
-    <!-- wow js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
-        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        new WOW().init();
-    </script>
     <!-- ApiConnector -->
     <script src="../javascripts/ApiConnector/connector.js" type="module"></script>
+    <!-- xử lý cookie -->
+    <script src="../javascripts/Controller/RegisterCookieController.js" type="module"></script>
     <!-- uitilities -->
     <script src="../javascripts/Utilities/checkInput.js"></script>
     <script src="../javascripts/registerPage.js" type="module"></script>
