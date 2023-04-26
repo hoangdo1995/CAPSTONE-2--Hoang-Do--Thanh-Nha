@@ -1,6 +1,9 @@
 @mixin headerComponent(){
     background-color: $c0-text-primary;
         margin-bottom: 100px;
+        @media only screen and (max-width: 567px){
+            margin-bottom: 50px;
+        }
         .header-sub-container{
             display: flex;
             justify-content: space-between;

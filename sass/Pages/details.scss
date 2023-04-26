@@ -4,6 +4,7 @@
 @import '../Layouts/_footer.scss';
 @import '../Layouts/_header.scss';
 
+
 body {
 
     .header{
@@ -17,7 +18,13 @@ body {
         .product-container{
             margin-left: 100px;
             display: flex;
-            
+            @media only screen and (max-width: 768px){
+                margin-left: 65px;
+            }
+            @media only screen and (max-width: 567px){
+                display: unset;
+            }
+         
             // border: 1px solid red;
             .product-image{
                 background-color: #F8F8F8;
@@ -27,9 +34,24 @@ body {
                 padding: 100px 50px;
                 margin-right: 100px;
                 width: 30%;
+                img{
+                    width: 100%;
+                }
+                @media only screen and (max-width: 768px){
+                    width: 40%;
+                    margin-right: 50px;
+                }
+                @media only screen and (max-width: 567px){
+                    width: 80%;
+                    margin-left: 50px;
+                }
             }
             .product-detail{
                 width: 42%;
+                @media only screen and (max-width: 567px){
+                    width: 80%;
+                    margin: 15px auto;
+                }
                 .product-descriptions{
                     margin-bottom: 15px;
                     h1{
@@ -49,12 +71,19 @@ body {
                     }
                     .size{
                         display: flex;
+                        @media only screen and (max-width: 567px){
+                            margin: 10px;
+                        }
                         p{
                             background-color: $c0-text-grey;
                             padding: 10px;
                             margin-right: 10px;
                             font-size: 24px;
                             font-weight: 600;
+                            @media only screen and (max-width: 567px){
+                                margin: 10px;
+                               
+                            }
                         }
                     }
                 }
@@ -88,6 +117,7 @@ body {
                             font-size: 30px;
                             font-weight: 400;
                             padding: 0px 20px;
+
                         }
                     }
                     .add-to-cards{
@@ -98,8 +128,28 @@ body {
                         padding: 15px 0px;
                         font-size: 24px;
                         font-weight: 500;
+                        @media only screen and (max-width: 768px){
+                            margin-left: 20px;
+                            font-size: 20px;
+                            font-weight: 500;
+                            width: 50%;
+                            height: 5%;
+                        }
+                        @media only screen and (max-width: 567px){
+                            margin-left: 0px;
+                            font-size: 20px;
+                            font-weight: 500;
+                            width: 70%;
+                        }
+                    }
+                    @media only screen and (max-width: 768px){
+                        display: flex;
+                    }
+                    @media only screen and (max-width: 567px){
+                        display: unset;
                     }
                 }
+
             }
         }
     }
@@ -107,5 +157,7 @@ body {
     .footer {
         @include footerComponent();
         font-size: 12px;
+
+
     }
 }
