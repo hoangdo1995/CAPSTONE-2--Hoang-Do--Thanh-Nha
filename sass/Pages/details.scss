@@ -1,5 +1,111 @@
-@import '../Layouts/header';
-//code phần body
+@import '../Bases/_base.scss';
+@import '../Helpers/_helper.scss';
+@import '../Components/_component.scss';
+@import '../Layouts/_footer.scss';
+@import '../Layouts/_header.scss';
 
+body {
 
-@import '../Layouts/footer';
+    .header{
+        @include headerComponent();
+    }
+
+    .carousel{}
+
+    .product{
+        
+        .product-container{
+            margin-left: 100px;
+            display: flex;
+            
+            // border: 1px solid red;
+            .product-image{
+                background-color: #F8F8F8;
+                border: 1px solid red;
+                text-align: center;
+                align-self: center;
+                padding: 100px 50px;
+                margin-right: 100px;
+                width: 30%;
+            }
+            .product-detail{
+                width: 42%;
+                .product-descriptions{
+                    margin-bottom: 15px;
+                    h1{
+                        margin-bottom: 15px;
+                        font-size: 30px;
+                        font-weight: 300;
+                    }
+
+                }
+                .product-size{
+                    margin-bottom: 15px;
+                    h1{
+                        margin-bottom: 15px;
+                        font-size: 24px;
+                        font-weight: 500;
+                        color: #1ED90E;
+                    }
+                    .size{
+                        display: flex;
+                        p{
+                            background-color: $c0-text-grey;
+                            padding: 10px;
+                            margin-right: 10px;
+                            font-size: 24px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .product-price{
+                    margin-bottom: 15px;
+                    font-size: 30px;
+                    font-weight: 600;
+                    color: $c0-text-third;
+                }
+
+                .product-actions{
+                    .amounts{
+                        margin-bottom: 15px;
+                        display: flex;
+                        align-items: center;
+                        .plus{
+                            background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
+                            padding: 5px 15px;
+                            font-size: 30px;
+                            font-weight: 400;
+                        }
+                        .minus{
+                            background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
+                            padding: 5px 15px;
+                            font-size: 30px;
+                            font-weight: 400;
+                        }
+
+                        .amount-items{
+                            font-size: 30px;
+                            font-weight: 400;
+                            padding: 0px 20px;
+                        }
+                    }
+                    .add-to-cards{
+                        background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+                        width: 35%;
+                        text-align: center;
+                        color: $c0-text-light;
+                        padding: 15px 0px;
+                        font-size: 24px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        @include footerComponent();
+        font-size: 12px;
+    }
+}

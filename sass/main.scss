@@ -1,10 +1,12 @@
-@import './Bases/base.scss';
+@import './Bases/_base.scss';
 @import './Helpers/_helper.scss';
-@import './Components/component.scss';
+@import './Components/_component.scss';
+@import './Layouts/_footer.scss';
+@import './Layouts/_header.scss';
 
 body {
 
-    @import './Layouts/header';
+    @include headerComponent();
 
     .carousel {
         .container {
@@ -169,7 +171,6 @@ body {
             }
         }
     }
-
     .products {
         .container {
             background-color: var(--bg-color-primary);
@@ -289,5 +290,6 @@ body {
         }
     }
 
-    @import './Layouts/footer';
+    @include footerComponent();
 }
+

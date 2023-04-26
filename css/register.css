@@ -4004,7 +4004,7 @@ body .register .container .register-title .title {
   font-weight: 400;
   color: var(--text-color-primary);
   text-align: center;
-  margin-top: 50px;
+  padding-top: 50px;
 }
 body .register .container .register-body {
   font-size: 24px;
