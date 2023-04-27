@@ -1,10 +1,12 @@
 @import '../Bases/base';
 @import '../Helpers/_helper.scss';
 @import '../Components/_component.scss';
+@import '../Layouts/_footer.scss';
+@import '../Layouts/_header.scss';
 
 
 body {
-    @import '../Layouts/header';
+    @include headerComponent();
 
     .register {
         .container {
@@ -139,5 +141,5 @@ body {
 
 
 
-    @import '../Layouts/footer';
+    @include footerComponent();
 }

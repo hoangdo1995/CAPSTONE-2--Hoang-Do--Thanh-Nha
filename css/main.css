@@ -3998,6 +3998,11 @@ p {
   color: inherit;
 }
 
+@media only screen and (max-width: 567px) {
+  body {
+    margin-bottom: 50px;
+  }
+}
 body .header-sub-container {
   display: flex;
   background-color: var(--text-color-primary);
@@ -4038,6 +4043,8 @@ body .header-sub-container .user-item .login {
 body .header-sub-container .user-item .register {
   font-size: 16px;
   font-weight: 300;
+  text-decoration: none;
+  color: inherit;
 }
 body .menu-item {
   width: 100%;
@@ -4331,8 +4338,18 @@ body .footer-container {
 body .footer-container .get-help {
   width: 32%;
 }
+@media only screen and (max-width: 768px) {
+  body .footer-container .get-help {
+    width: 25%;
+  }
+}
 body .footer-container .get-help h1 {
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+  body .footer-container .get-help h1 {
+    font-size: 18px;
+  }
 }
 body .footer-container .get-help ul {
   list-style: none;
@@ -4348,8 +4365,18 @@ body .footer-container .orders {
   position: relative;
   width: 25%;
 }
+@media only screen and (max-width: 768px) {
+  body .footer-container .orders {
+    width: 25%;
+  }
+}
 body .footer-container .orders h1 {
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+  body .footer-container .orders h1 {
+    font-size: 18px;
+  }
 }
 body .footer-container .orders ul {
   list-style: none;
@@ -4370,12 +4397,28 @@ body .footer-container .orders::before {
   width: 1px;
   height: 115%;
 }
+@media only screen and (max-width: 768px) {
+  body .footer-container .orders::before {
+    height: 110%;
+    left: -15px;
+  }
+}
 body .footer-container .register {
   width: 32%;
   position: relative;
 }
+@media only screen and (max-width: 768px) {
+  body .footer-container .register {
+    width: 25%;
+  }
+}
 body .footer-container .register h1 {
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+  body .footer-container .register h1 {
+    font-size: 18px;
+  }
 }
 body .footer-container .register ul {
   list-style: none;
@@ -4401,11 +4444,27 @@ body .footer-container .register::before {
   width: 1px;
   height: 115%;
 }
+@media only screen and (max-width: 768px) {
+  body .footer-container .register::before {
+    height: 110%;
+    left: -15px;
+  }
+}
 body .footer-container .email-signup {
   width: 32%;
 }
+@media only screen and (max-width: 768px) {
+  body .footer-container .email-signup {
+    width: 25%;
+  }
+}
 body .footer-container .email-signup h1 {
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+  body .footer-container .email-signup h1 {
+    font-size: 18px;
+  }
 }
 body .footer-container .email-signup ul {
   list-style: none;
@@ -4426,8 +4485,18 @@ body .footer-container .gift-cards {
   position: relative;
   width: 25%;
 }
+@media only screen and (max-width: 768px) {
+  body .footer-container .gift-cards {
+    width: 25%;
+  }
+}
 body .footer-container .gift-cards h1 {
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+  body .footer-container .gift-cards h1 {
+    font-size: 18px;
+  }
 }
 body .footer-container .gift-cards ul {
   list-style: none;
@@ -4453,12 +4522,28 @@ body .footer-container .gift-cards::before {
   width: 1px;
   height: 115%;
 }
+@media only screen and (max-width: 768px) {
+  body .footer-container .gift-cards::before {
+    height: 110%;
+    left: -15px;
+  }
+}
 body .footer-container .store-location {
   width: 32%;
   position: relative;
 }
+@media only screen and (max-width: 768px) {
+  body .footer-container .store-location {
+    width: 25%;
+  }
+}
 body .footer-container .store-location h1 {
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+  body .footer-container .store-location h1 {
+    font-size: 18px;
+  }
 }
 body .footer-container .store-location ul {
   list-style: none;
@@ -4483,6 +4568,12 @@ body .footer-container .store-location::before {
   left: -30px;
   width: 1px;
   height: 115%;
+}
+@media only screen and (max-width: 768px) {
+  body .footer-container .store-location::before {
+    height: 110%;
+    left: -15px;
+  }
 }
 body .footer-container:nth-child(2) {
   background-color: #ececec;

@@ -3994,6 +3994,11 @@ p {
   color: inherit;
 }
 
+@media only screen and (max-width: 567px) {
+  body .header {
+    margin-bottom: 50px;
+  }
+}
 body .header .header-sub-container {
   display: flex;
   background-color: var(--text-color-primary);
@@ -4034,6 +4039,8 @@ body .header .header-sub-container .user-item .login {
 body .header .header-sub-container .user-item .register {
   font-size: 16px;
   font-weight: 300;
+  text-decoration: none;
+  color: inherit;
 }
 body .header .menu-item {
   width: 100%;
@@ -4068,20 +4075,50 @@ body .header .menu-item .menu-container a:hover::after {
   transform: scaleX(1);
 }
 body .product .product-container {
-  margin-left: 100px;
+  padding: 50px 100px;
   display: flex;
+}
+@media only screen and (max-width: 768px) {
+  body .product .product-container {
+    padding-left: 65px;
+  }
+}
+@media only screen and (max-width: 567px) {
+  body .product .product-container {
+    display: unset;
+  }
 }
 body .product .product-container .product-image {
   background-color: #F8F8F8;
-  border: 1px solid red;
   text-align: center;
   align-self: center;
   padding: 100px 50px;
   margin-right: 100px;
   width: 30%;
 }
+body .product .product-container .product-image img {
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  body .product .product-container .product-image {
+    width: 40%;
+    margin-right: 50px;
+  }
+}
+@media only screen and (max-width: 567px) {
+  body .product .product-container .product-image {
+    width: 80%;
+    margin-left: 50px;
+  }
+}
 body .product .product-container .product-detail {
   width: 42%;
+}
+@media only screen and (max-width: 567px) {
+  body .product .product-container .product-detail {
+    width: 80%;
+    margin: 15px auto;
+  }
 }
 body .product .product-container .product-detail .product-descriptions {
   margin-bottom: 15px;
@@ -4103,12 +4140,22 @@ body .product .product-container .product-detail .product-size h1 {
 body .product .product-container .product-detail .product-size .size {
   display: flex;
 }
+@media only screen and (max-width: 567px) {
+  body .product .product-container .product-detail .product-size .size {
+    margin: 10px;
+  }
+}
 body .product .product-container .product-detail .product-size .size p {
   background-color: #CBC9C9;
   padding: 10px;
   margin-right: 10px;
   font-size: 24px;
   font-weight: 600;
+}
+@media only screen and (max-width: 567px) {
+  body .product .product-container .product-detail .product-size .size p {
+    margin: 10px;
+  }
 }
 body .product .product-container .product-detail .product-price {
   margin-bottom: 15px;
@@ -4147,6 +4194,33 @@ body .product .product-container .product-detail .product-actions .add-to-cards 
   font-size: 24px;
   font-weight: 500;
 }
+@media only screen and (max-width: 768px) {
+  body .product .product-container .product-detail .product-actions .add-to-cards {
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 50%;
+    height: 5%;
+  }
+}
+@media only screen and (max-width: 567px) {
+  body .product .product-container .product-detail .product-actions .add-to-cards {
+    margin-left: 0px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body .product .product-container .product-detail .product-actions {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 567px) {
+  body .product .product-container .product-detail .product-actions {
+    display: unset;
+  }
+}
 body .footer {
   font-size: 12px;
 }
@@ -4158,8 +4232,18 @@ body .footer .footer-container {
 body .footer .footer-container .get-help {
   width: 32%;
 }
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .get-help {
+    width: 25%;
+  }
+}
 body .footer .footer-container .get-help h1 {
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .get-help h1 {
+    font-size: 18px;
+  }
 }
 body .footer .footer-container .get-help ul {
   list-style: none;
@@ -4175,8 +4259,18 @@ body .footer .footer-container .orders {
   position: relative;
   width: 25%;
 }
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .orders {
+    width: 25%;
+  }
+}
 body .footer .footer-container .orders h1 {
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .orders h1 {
+    font-size: 18px;
+  }
 }
 body .footer .footer-container .orders ul {
   list-style: none;
@@ -4197,12 +4291,28 @@ body .footer .footer-container .orders::before {
   width: 1px;
   height: 115%;
 }
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .orders::before {
+    height: 110%;
+    left: -15px;
+  }
+}
 body .footer .footer-container .register {
   width: 32%;
   position: relative;
 }
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .register {
+    width: 25%;
+  }
+}
 body .footer .footer-container .register h1 {
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .register h1 {
+    font-size: 18px;
+  }
 }
 body .footer .footer-container .register ul {
   list-style: none;
@@ -4228,11 +4338,27 @@ body .footer .footer-container .register::before {
   width: 1px;
   height: 115%;
 }
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .register::before {
+    height: 110%;
+    left: -15px;
+  }
+}
 body .footer .footer-container .email-signup {
   width: 32%;
 }
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .email-signup {
+    width: 25%;
+  }
+}
 body .footer .footer-container .email-signup h1 {
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .email-signup h1 {
+    font-size: 18px;
+  }
 }
 body .footer .footer-container .email-signup ul {
   list-style: none;
@@ -4253,8 +4379,18 @@ body .footer .footer-container .gift-cards {
   position: relative;
   width: 25%;
 }
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .gift-cards {
+    width: 25%;
+  }
+}
 body .footer .footer-container .gift-cards h1 {
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .gift-cards h1 {
+    font-size: 18px;
+  }
 }
 body .footer .footer-container .gift-cards ul {
   list-style: none;
@@ -4280,12 +4416,28 @@ body .footer .footer-container .gift-cards::before {
   width: 1px;
   height: 115%;
 }
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .gift-cards::before {
+    height: 110%;
+    left: -15px;
+  }
+}
 body .footer .footer-container .store-location {
   width: 32%;
   position: relative;
 }
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .store-location {
+    width: 25%;
+  }
+}
 body .footer .footer-container .store-location h1 {
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .store-location h1 {
+    font-size: 18px;
+  }
 }
 body .footer .footer-container .store-location ul {
   list-style: none;
@@ -4310,6 +4462,12 @@ body .footer .footer-container .store-location::before {
   left: -30px;
   width: 1px;
   height: 115%;
+}
+@media only screen and (max-width: 768px) {
+  body .footer .footer-container .store-location::before {
+    height: 110%;
+    left: -15px;
+  }
 }
 body .footer .footer-container:nth-child(2) {
   background-color: #ececec;

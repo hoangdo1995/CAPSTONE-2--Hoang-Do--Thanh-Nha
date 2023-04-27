@@ -1,5 +1,8 @@
 @mixin headerComponent(){
         // margin-bottom: 100px;
+        @media only screen and (max-width: 567px){
+            margin-bottom: 50px;
+        }
         .header-sub-container{
             display: flex;
             background-color: var(--text-color-primary);
@@ -39,6 +42,8 @@
                 .register{
                     font-size: 16px;
                     font-weight: 300;
+                    text-decoration: none;
+                    color: inherit;
                 }
             }
         }
