@@ -31,7 +31,7 @@ function postRelatedProduct(prod){
                     </a>
                 </div>
                 <div class="item-shopping">
-                    <button onclick="getProductId()"><a"><span>Buy now</span></a></button>
+                    <button onclick="getProductId()"><a href="./pages/detail.html?id=${product.id}"><span>Buy now</span></a></button>
                     <div class="item-price">
                         <p class="price">$${product.price}</p>
                     </div>
@@ -40,9 +40,7 @@ function postRelatedProduct(prod){
         </div>`;
     }
     document.querySelector("#product-body").innerHTML = relatedProduct;
-
 }
-
 
 function renderUI(){
     var promise = callApi(`/getbyid?id=${id}`);
@@ -51,9 +49,8 @@ function renderUI(){
         postRelatedProduct(prod);
     })
 }
+
 renderUI();
-
-
 
 
 
