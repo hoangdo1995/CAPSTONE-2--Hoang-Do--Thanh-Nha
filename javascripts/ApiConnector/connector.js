@@ -1,4 +1,4 @@
-export function callApi(endpoint = '', method = 'GET',body){
+function callApi(endpoint = '', method = 'GET',body){
     return axios({
         url:`https://shop.cyberlearn.vn/api${endpoint}`,
         method: method,

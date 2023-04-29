@@ -1,13 +1,13 @@
 @mixin headerComponent() {
+    background-color: $c0-text-primary;
+    margin-bottom: 100px;
 
-    // margin-bottom: 100px;
     @media only screen and (max-width: 567px) {
         margin-bottom: 50px;
     }
 
     .header-sub-container {
         display: flex;
-        background-color: var(--text-color-primary);
         justify-content: space-between;
         padding: 8px;
 
@@ -15,9 +15,8 @@
             margin-left: 50px;
 
             img {
-                // position: absolute;
-                width: 116px;
-                height: 32px;
+                width: 150%;
+                cursor: pointer;
             }
         }
 
@@ -32,14 +31,22 @@
                 margin-right: 15px;
                 align-items: center;
                 position: relative;
+                text-decoration: none;
+                color: $c0-text-light;
 
                 img {
                     position: absolute;
-                    width: 31px;
-                    height: 31px;
+                    width: 100%;
                     top: 3px;
                     left: -30px;
+                    transition: all 0.5s;
+
+                    &:hover {
+                        transform: scale(1.2);
+                        transition: all 0.5s;
+                    }
                 }
+
             }
 
             .login {
@@ -47,20 +54,35 @@
                 margin-right: 30px;
                 font-weight: 300;
                 cursor: pointer;
+                transition: all 0.5s;
+
+                &:hover {
+                    transform: scale(1.2);
+                    transition: all 0.5s;
+                }
             }
 
             .register {
+                text-decoration: none;
+                color: $c0-text-light;
                 font-size: 16px;
                 font-weight: 300;
-                text-decoration: none;
-                color: inherit;
+                cursor: pointer;
+                transition: all 0.5s;
+
+                &:hover {
+                    transform: scale(1.2);
+                    transition: all 0.5s;
+                }
             }
         }
     }
 
     .menu-item {
+        position: absolute;
         width: 100%;
         background-color: $c0-text-light;
+        margin-left: 50px;
 
         .menu-container {
             margin: 10px;
