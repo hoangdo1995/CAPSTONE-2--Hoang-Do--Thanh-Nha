@@ -1,5 +1,16 @@
 
-var id = 3;
+function getProductId(){
+    var id = 1;
+    console.log(window.location.href);
+    var href = window.location.href.split("=");
+    id = href[href.length-1]
+    console.log(id);
+    if(Number.isInteger(+id) && id > 0){
+        return id;
+    }
+
+    return 1;
+}
 
 function postProductDetails(prod){
     console.log(prod.data.content);
@@ -22,7 +33,7 @@ function postRelatedProduct(prod){
         `<div class="product-item">
             <div class="item-container">
                 <div class="item-infor">
-                    <a href="/pages/detail.html?id=${product.id}">
+                    <a href="/pages/detail.html?id=${product.id}" onclick="getProductId()">
                         <div class="item-image">
                             <img src="${product.image}" alt="${product.alias}">
                         </div>
@@ -31,7 +42,7 @@ function postRelatedProduct(prod){
                     </a>
                 </div>
                 <div class="item-shopping">
-                    <button onclick="getProductId()"><a href="./pages/detail.html?id=${product.id}"><span>Buy now</span></a></button>
+                    <button><span>Buy now</span></button>
                     <div class="item-price">
                         <p class="price">$${product.price}</p>
                     </div>
@@ -42,15 +53,16 @@ function postRelatedProduct(prod){
     document.querySelector("#product-body").innerHTML = relatedProduct;
 }
 
-function renderUI(){
+function renderUI(id){
     var promise = callApi(`/getbyid?id=${id}`);
+   
     promise.then(function(prod){
         postProductDetails(prod);
         postRelatedProduct(prod);
     })
 }
 
-renderUI();
+renderUI(getProductId());
 
 
 

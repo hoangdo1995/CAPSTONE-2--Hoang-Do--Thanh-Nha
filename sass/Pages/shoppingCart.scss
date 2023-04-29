@@ -1,0 +1,90 @@
+@import '../Bases/_base.scss';
+@import '../Helpers/_helper.scss';
+@import '../Components/_component.scss';
+@import '../Layouts/_footer.scss';
+@import '../Layouts/_header.scss';
+
+@mixin tableStyle(){
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 15px;
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+@mixin button(){
+    button {
+        font-size: 18px;
+        padding: 8px;
+        text-transform: capitalize;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+
+    }
+}
+
+body {
+    .header{
+        @include headerComponent();
+    }
+
+    .carousel{}
+
+    .product{
+        margin-left: 110px;
+        h1 {
+            @include styleText($fs-4, $fw-semiBold, var(--text-color-primary));
+            margin-bottom: 10px;
+        }
+        
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            
+            th {
+                @include tableStyle();
+                color: $c0-text-primary;
+                border-bottom: 1px solid $c0-text-grey-sub;
+            }
+            td {
+                @include tableStyle();
+                border-bottom: 1px solid $c0-text-grey-sub;
+                @include button();
+                .btn-view{
+                    background: #03a9f4;
+                    color: white;
+                }
+                .btn-delete{
+                    background: #e91e63;
+                    color: white;
+                }
+            }            
+        }
+
+        .btn-pay{
+            width: 83%;
+            text-align: right;
+            margin-top: 15px;
+            button{
+                @extend .btnByNow2;
+                width: 10%;
+                background: $linear1-bg-platinum;
+                font-weight: 500;
+                font-size: 20px;
+                height: 50px;
+                transition: all 0.5s;
+            }
+        }
+    }
+
+    .footer {
+        @include footerComponent();
+        font-size: 12px;
+    }
+}
