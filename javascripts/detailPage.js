@@ -1,4 +1,3 @@
-
 function getProductId(){
     var id = 0;
     console.log(window.location.href);
@@ -11,8 +10,6 @@ function getProductId(){
 
     return 1;
 }
-
-
 
 function postProductDetails(prod){
     console.log(prod.data.content);

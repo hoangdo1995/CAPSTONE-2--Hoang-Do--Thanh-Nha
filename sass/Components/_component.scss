@@ -37,3 +37,8 @@
     text-align: center;
 }
 
+.btnByNow3{
+    @extend .custom-btn;
+    @extend .btn-violet;
+}
+

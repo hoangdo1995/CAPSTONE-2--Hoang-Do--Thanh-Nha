@@ -146,6 +146,7 @@ body {
                         }
                     }
                     .add-to-cards{
+                        @extend .btnByNow3;
                         background: linear-gradient(126deg, rgba(208,23,238,0.95)  0%, rgba(156,26,242,0.95) 50%, rgba(208,23,238,0.95)  100%);
                         width: 35%;
                         text-align: center;
