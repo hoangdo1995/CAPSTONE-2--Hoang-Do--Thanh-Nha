@@ -56,19 +56,37 @@ body {
                 @include tableStyle();
                 border-bottom: 1px solid $c0-text-grey-sub;
                 @include button();
+                a{
+                    text-decoration: none;
+                    color: $c0-text-primary;
+                }
+
                 .btn-view{
                     background: #03a9f4;
-                    color: white;
+                    color: $c0-text-light;
+
+                    &:hover {
+                        box-shadow:
+                        7px 7px 20px 0px rgba(0, 0, 0, .2),
+                        4px 4px 5px 0px rgba(0, 0, 0, .3);
+                    transition: all 0.3s ease;
+                    }
                 }
                 .btn-delete{
                     background: #e91e63;
-                    color: white;
+                    color: $c0-text-light;
+                    &:hover {
+                        box-shadow:
+                        7px 7px 20px 0px rgba(0, 0, 0, .2),
+                        4px 4px 5px 0px rgba(0, 0, 0, .3);
+                    transition: all 0.3s ease;
+                    }
                 }
             }            
         }
 
         .btn-pay{
-            width: 83%;
+            width: 90%;
             text-align: right;
             margin-top: 15px;
             button{

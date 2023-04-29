@@ -3920,8 +3920,7 @@ body .header .header-sub-container .logo {
   margin-left: 50px;
 }
 body .header .header-sub-container .logo img {
-  width: 116px;
-  height: 32px;
+  width: 150%;
   cursor: pointer;
 }
 body .header .header-sub-container .user-item {
@@ -3935,11 +3934,12 @@ body .header .header-sub-container .user-item .shopping {
   margin-right: 15px;
   align-items: center;
   position: relative;
+  text-decoration: none;
+  color: #fff;
 }
 body .header .header-sub-container .user-item .shopping img {
   position: absolute;
-  width: 31px;
-  height: 31px;
+  width: 100%;
   top: 3px;
   left: -30px;
   transition: all 0.5s;
@@ -3960,6 +3960,8 @@ body .header .header-sub-container .user-item .login:hover {
   transition: all 0.5s;
 }
 body .header .header-sub-container .user-item .register {
+  text-decoration: none;
+  color: #fff;
   font-size: 16px;
   font-weight: 300;
   cursor: pointer;
@@ -4047,16 +4049,28 @@ body .product table td button {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+body .product table td a {
+  text-decoration: none;
+  color: #000;
+}
 body .product table td .btn-view {
   background: #03a9f4;
-  color: white;
+  color: #fff;
+}
+body .product table td .btn-view:hover {
+  box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 body .product table td .btn-delete {
   background: #e91e63;
-  color: white;
+  color: #fff;
+}
+body .product table td .btn-delete:hover {
+  box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 body .product .btn-pay {
-  width: 83%;
+  width: 90%;
   text-align: right;
   margin-top: 15px;
 }

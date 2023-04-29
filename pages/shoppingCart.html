@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/font.css">
     <!-- custom css -->
     <link rel="stylesheet" href="../css/shoppingCart.min.css">
-    <!-- <link rel="stylesheet" href="../css/table.css"> -->
+    
 
 </head>
 
@@ -22,16 +22,18 @@
             <div class="header-container">
                 <div class="header-sub-container">
                     <div class="logo">
-                        <img src="../images/logo.png" alt="logo">
+                        <a href="/index.html">
+                            <img src="../images/logo.png" alt="logo">
+                        </a>
                     </div>
 
                     <div class="user-item">
-                        <p class="shopping">
-                            <img src="../images/shoppingIcon.png" alt="shoppingIcon">
+                        <a  class="shopping" href="/pages/shoppingCart.html">
+                            <img src="../images/shoppingIcon.png" alt="shoppingIcon" >
                             <span>(1)</span>
-                        </p>
+                        </a>
                         <p class="login">Login</p>
-                        <p class="register">Register</p>
+                        <a class="register" href="./register.html">Register</a>
                     </div>
                 </div>
 
@@ -67,13 +69,17 @@
 
                 <tbody>
                     <tr>
-                        <td><img src="https://placehold.co/60" alt="placehold"></td>
-                        <td>ninja</td>
-                        <td>ahmed mohamed</td>
+                        <td>
+                            <a href="./detail.html">
+                                <img src="../images/shoe2.png" alt="placehold">
+                            </a>
+                        </td>
+                        <td>1</td>
+                        <td><a href="./detail.html">Adidas Prophere</a></td>
                         <td>120</td>
                         <td>
-                            <button class="btn-view">+</button>
-                            <button class="btn-delete">-</button>
+                            <button class="btn-view">Add</button>
+                            <button class="btn-delete">Delete</button>
                         </td>
                     </tr>
             </table>
@@ -184,7 +190,6 @@
     </script>
     <!-- ApiConnector -->
     <script src="../javascripts/ApiConnector/connector.js"></script>
-    <script src="../javascripts/detailPage.js"></script>
 
 </body>
 

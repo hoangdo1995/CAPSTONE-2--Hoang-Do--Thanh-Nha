@@ -1,6 +1,6 @@
 
 function getProductId(){
-    var id = 1;
+    var id = 0;
     console.log(window.location.href);
     var href = window.location.href.split("=");
     id = href[href.length-1]
@@ -11,6 +11,8 @@ function getProductId(){
 
     return 1;
 }
+
+
 
 function postProductDetails(prod){
     console.log(prod.data.content);
@@ -42,7 +44,7 @@ function postRelatedProduct(prod){
                     </a>
                 </div>
                 <div class="item-shopping">
-                    <button><span>Buy now</span></button>
+                    <button><a href="./shoppingCart.html"><span>Buy now</span></a></button>
                     <div class="item-price">
                         <p class="price">$${product.price}</p>
                     </div>
@@ -52,6 +54,7 @@ function postRelatedProduct(prod){
     }
     document.querySelector("#product-body").innerHTML = relatedProduct;
 }
+
 
 function renderUI(id){
     var promise = callApi(`/getbyid?id=${id}`);

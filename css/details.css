@@ -3920,8 +3920,7 @@ body .header .header-sub-container .logo {
   margin-left: 50px;
 }
 body .header .header-sub-container .logo img {
-  width: 116px;
-  height: 32px;
+  width: 150%;
   cursor: pointer;
 }
 body .header .header-sub-container .user-item {
@@ -3935,11 +3934,12 @@ body .header .header-sub-container .user-item .shopping {
   margin-right: 15px;
   align-items: center;
   position: relative;
+  text-decoration: none;
+  color: #fff;
 }
 body .header .header-sub-container .user-item .shopping img {
   position: absolute;
-  width: 31px;
-  height: 31px;
+  width: 100%;
   top: 3px;
   left: -30px;
   transition: all 0.5s;
@@ -3960,6 +3960,8 @@ body .header .header-sub-container .user-item .login:hover {
   transition: all 0.5s;
 }
 body .header .header-sub-container .user-item .register {
+  text-decoration: none;
+  color: #fff;
   font-size: 16px;
   font-weight: 300;
   cursor: pointer;
