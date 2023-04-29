@@ -17,6 +17,7 @@ body {
   --bg-button-grey:#DEDDDC;
   --linear-bg-primary:linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
   --linear-bg-secondary:linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+  --text-danger-1:rgb(245, 134, 134);
 }
 
 /*-----------------------------FONT SIZE-------------------------*/
@@ -4035,6 +4036,7 @@ body .header .header-sub-container .user-item .login {
   font-size: 16px;
   margin-right: 30px;
   font-weight: 300;
+  cursor: pointer;
 }
 body .header .header-sub-container .user-item .register {
   font-size: 16px;

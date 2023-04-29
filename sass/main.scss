@@ -3,6 +3,7 @@
 @import './Components/_component.scss';
 @import './Layouts/_footer.scss';
 @import './Layouts/_header.scss';
+@import './Layouts/login.scss';
 
 body {
 
@@ -291,5 +292,7 @@ body {
     }
 
     @include footerComponent();
+
+    @include loginComponent();
 }
 

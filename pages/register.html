@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,21 +22,21 @@
                     <div class="logo">
                         <a href="../index.html"><img src="../images/logo.png" alt="logo"></a>
                     </div>
-                    
+
                     <div class="user-item">
-                        <p  class="shopping">
+                        <p class="shopping">
                             <img src="../images/shoppingIcon.png" alt="shoppingIcon">
                             <span>(1)</span>
                         </p>
-                        <p class="login">Login</p>
+                        <p class="login" onclick="changeStatePageLogin()">Login</p>
                         <a href="../pages/register.html" class="register">Register</a>
                     </div>
                 </div>
-        
-        
+
+
                 <div class="menu-item">
                     <div class="menu-container">
-                        <a href="#">Home</a> 
+                        <a href="#">Home</a>
                         <a href="#">Men</a>
                         <a href="#">Woman</a>
                         <a href="#">Kid</a>
@@ -44,7 +45,7 @@
                 </div>
             </div>
         </div>
-        
+
     </header>
     <!-- BODY REGISTER -->
     <section class="register">
@@ -84,7 +85,7 @@
                                     <p class="input-name">password</p>
                                     <p class="alert-notify" id="password-error"></p>
                                 </div>
-                                <input type="password" id="password" name="password" >
+                                <input type="password" id="password" name="password">
                             </div>
                             <div class="input-detail">
                                 <div class="input-tag">
@@ -94,12 +95,12 @@
                                 <input type="password" id="password_confirm" name="password-confirm">
                             </div>
                             <div class="input-detail gender">
-                                <span>Gender</span><input type="radio" name="gender" value="true" checked>Male <input type="radio" name="gender" value="false"> Female
+                                <span>Gender</span><input type="radio" name="gender" value="true" checked>Male <input
+                                    type="radio" name="gender" value="false"> Female
                             </div>
                             <button type="submit"><span>Submit</span></button>
                         </div>
                     </div>
-                    
                 </form>
             </div>
         </div>
@@ -115,7 +116,7 @@
                             <a href="#">Contact us</a>
                         </li>
                         <li>
-                            <a href="#">Shopping</a>                    
+                            <a href="#">Shopping</a>
                         </li>
                         <li>
                             <a href="#">NIKEID</a>
@@ -125,33 +126,34 @@
                         </li>
                     </ul>
                 </div>
-    
-                <div class="orders"> 
+
+                <div class="orders">
                     <h1>ORDERS</h1>
                     <ul>
                         <li>
                             <a href="#">Payment options</a>
                         </li>
                         <li>
-                            <a href="#">Shipping and delivery</a>                    
+                            <a href="#">Shipping and delivery</a>
                         </li>
                         <li>
                             <a href="#">Returns</a>
                         </li>
                     </ul>
                 </div>
-    
+
                 <div class="register">
                     <h1>REGISTER</h1>
                     <ul>
                         <li>
-                            <a href="#">Create one account to manage everything you do with Nike, from your shopping preferences to your Nike+ activity.</a>
+                            <a href="#">Create one account to manage everything you do with Nike, from your shopping
+                                preferences to your Nike+ activity.</a>
                         </li>
                     </ul>
                     <a href="#">learn more</a>
                 </div>
             </div>
-    
+
             <div class="footer-container">
                 <div class="email-signup">
                     <h1>EMAIL SIGN UP</h1>
@@ -162,8 +164,8 @@
                     </ul>
                     <a href="#">Sign up now</a>
                 </div>
-    
-                <div class="gift-cards"> 
+
+                <div class="gift-cards">
                     <h1>GIFT CARDS</h1>
                     <ul>
                         <li>
@@ -172,7 +174,7 @@
                     </ul>
                     <a href="#">View cards</a>
                 </div>
-    
+
                 <div class="store-location">
                     <h1>STORES NEAR YOU</h1>
                     <ul>
@@ -185,11 +187,44 @@
             </div>
         </div>
     </section>
+    <!-- login page -->
+    <section class="login-hold" >
+        <div class="login-page">
+            <div class="login-container">
+                <h3>Login</h3>
+                <p id="login_error"></p>
+                <form   form action="" id="form_login">
+                    <div class="input-details">
+                        <div class="input-detail">
+                            <div class="input-tag">
+                                <p class="input-name">email</p>
+                                <p class="alert-notify" id="email-error"></p>
+                            </div>
+                            <input type="text" id="email_login" name="email">
+                        </div>
+                        <div class="input-detail">
+                            <div class="input-tag">
+                                <p class="input-name">password</p>
+                                <p class="alert-notify" id="password-error"></p>
+                            </div>
+                            <input type="password" id="password_login" name="password">
+                        </div>
+                        <button type="submit"><span>Sign in</span></button>
+                    </div>
+                </form>
+                <div class="signup-hold">Don't have an account <a href="../pages/register.html">Sign up</a></div>
 
+                <!-- //button close page login -->
+                <button class="close_button" onclick="changeStatePageLogin()"></button>
+            </div>
+        </div>
+    </section>
 
     <!-- javascripts -->
     <!-- JQUERY -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- axios cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.5/axios.min.js"
         integrity="sha512-nnNHpffPSgINrsR8ZAIgFUIMexORL5tPwsfktOTxVYSv+AUAILuFYWES8IHl+hhIhpFGlKvWFiz9ZEusrPcSBQ=="
@@ -200,6 +235,8 @@
     <script src="../javascripts/Controller/RegisterCookieController.js" type="module"></script>
     <!-- uitilities -->
     <script src="../javascripts/Utilities/checkInput.js"></script>
+    <!-- xu ly login -->
+    <script src="../javascripts/Controller/loginController.js" type="module"></script>
     <script src="../javascripts/registerPage.js" type="module"></script>
 
 </body>

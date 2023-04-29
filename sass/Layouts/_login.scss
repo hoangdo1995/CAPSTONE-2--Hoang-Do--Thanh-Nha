@@ -1,0 +1,115 @@
+//login page
+@mixin loginComponent(){
+    .login-hold{
+        z-index: 3;
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 1200px;
+        width: 1400px;
+        transform: translateX(-700px);
+        backdrop-filter: blur(5px);
+        transition: all 10s;
+        .login-page {
+            position: absolute;
+            top: 100px;
+            width: 500px;
+            @include boxStyle(1px solid var(--bg-button-primary), 10px, var(--bg-button-grey), 7px 7px 11px -6px #000000);
+            .login-container {
+                padding: 20px 50px;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                h3 {
+                    @include styleText($fs-3, $fw-extraBold, var(--text-color-primary));
+                    text-align: center;
+                }
+                #login_error{
+                    color: var(--text-danger-1);
+                    text-align: center;
+                    margin-top:10px;
+                }
+    
+                .input-details {
+                    width: 100%;
+    
+                    .input-detail {
+                        margin: 20px 0;
+    
+                        .input-tag {}
+    
+                        input {
+                            width: 100%;
+                            padding: 5px;
+                            font-size: $fs-1;
+                            margin-top: 10px;
+                            border: none;
+                            border-radius: 5px;
+                            &:focus {
+                                border: 0;
+                                outline: none;
+                                border-bottom: 3px solid #AE18E2;
+                                box-shadow: 0px 0px 8px 5px rgba(174, 24, 226, 0.3);
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+    
+                    button {
+                        height: 50px;
+                        width: 100%;
+                        font-size: $fs-2;
+                        color: var(--text-color-light);
+                        background-color: #AE18E2;
+                        @extend .custom-btn;
+                        @extend .btn-violet;
+                    }
+                }
+                .signup-hold{
+                    text-align: center;
+                    padding: 20px;
+                    color:grey;
+                    a{
+                        margin-left: 20px;
+                        text-align: right;
+                        text-decoration: none;
+                        font-weight: $fw-semiBold;
+                        &:hover{
+                            color:#fbfbfc;
+                        }
+                    }
+                }
+    
+                .close_button{
+                    position: absolute;
+                    right: 10px;
+                    border: none;
+                    background-color: transparent;
+                    font-size: $fs-3;
+                    font-weight: $fw-bolder;
+                    background-image: url(../../images/close.png);
+                    width: 40px;
+                    height: 40px;
+                    background-size: contain;
+                    cursor: pointer;
+                    &:hover{
+                        background-image: url(../../images/close2.png);
+                    }
+                }
+    
+            }
+        }
+    
+    }
+    .login-hold.active{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .login-page{
+            @extend .animate__fadeInDown;
+            @extend .animate__animated ;
+        }
+        
+    }
+}

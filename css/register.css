@@ -17,6 +17,7 @@ body {
   --bg-button-grey:#DEDDDC;
   --linear-bg-primary:linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
   --linear-bg-secondary:linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+  --text-danger-1:rgb(245, 134, 134);
 }
 
 /*-----------------------------FONT SIZE-------------------------*/
@@ -78,7 +79,7 @@ body {
 }
 
 /*-----------------------------MIXIN-------------------------*/
-.custom-btn, body .register .container .register-body #register-form button, .btnByNow2, .btnByNow1 {
+.custom-btn, body .login-hold .login-page .login-container .input-details button, body .register .container .register-body #register-form button, .btnByNow2, .btnByNow1 {
   border-radius: 3px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -171,13 +172,13 @@ body {
 }
 
 /*----------button violet---------*/
-.btn-violet, body .register .container .register-body #register-form button {
+.btn-violet, body .login-hold .login-page .login-container .input-details button, body .register .container .register-body #register-form button {
   line-height: 42px;
   padding: 0;
   border: none;
 }
 
-.btn-violet span, body .register .container .register-body #register-form button span {
+.btn-violet span, body .login-hold .login-page .login-container .input-details button span, body .register .container .register-body #register-form button span {
   position: relative;
   display: block;
   width: 100%;
@@ -187,8 +188,9 @@ body {
   justify-content: center;
 }
 
-.btn-violet:before, body .register .container .register-body #register-form button:before,
+.btn-violet:before, body .login-hold .login-page .login-container .input-details button:before, body .register .container .register-body #register-form button:before,
 .btn-violet:after,
+body .login-hold .login-page .login-container .input-details button:after,
 body .register .container .register-body #register-form button:after {
   position: absolute;
   content: "";
@@ -199,31 +201,32 @@ body .register .container .register-body #register-form button:after {
   transition: all 0.3s ease;
 }
 
-.btn-violet:before, body .register .container .register-body #register-form button:before {
+.btn-violet:before, body .login-hold .login-page .login-container .input-details button:before, body .register .container .register-body #register-form button:before {
   height: 0%;
   width: 2px;
 }
 
-.btn-violet:after, body .register .container .register-body #register-form button:after {
+.btn-violet:after, body .login-hold .login-page .login-container .input-details button:after, body .register .container .register-body #register-form button:after {
   width: 0%;
   height: 2px;
 }
 
-.btn-violet:hover, body .register .container .register-body #register-form button:hover {
+.btn-violet:hover, body .login-hold .login-page .login-container .input-details button:hover, body .register .container .register-body #register-form button:hover {
   color: #AE18E2;
   background: transparent;
 }
 
-.btn-violet:hover:before, body .register .container .register-body #register-form button:hover:before {
+.btn-violet:hover:before, body .login-hold .login-page .login-container .input-details button:hover:before, body .register .container .register-body #register-form button:hover:before {
   height: 100%;
 }
 
-.btn-violet:hover:after, body .register .container .register-body #register-form button:hover:after {
+.btn-violet:hover:after, body .login-hold .login-page .login-container .input-details button:hover:after, body .register .container .register-body #register-form button:hover:after {
   width: 100%;
 }
 
-.btn-violet span:before, body .register .container .register-body #register-form button span:before,
+.btn-violet span:before, body .login-hold .login-page .login-container .input-details button span:before, body .register .container .register-body #register-form button span:before,
 .btn-violet span:after,
+body .login-hold .login-page .login-container .input-details button span:after,
 body .register .container .register-body #register-form button span:after {
   position: absolute;
   content: "";
@@ -234,21 +237,21 @@ body .register .container .register-body #register-form button span:after {
   transition: all 0.3s ease;
 }
 
-.btn-violet span:before, body .register .container .register-body #register-form button span:before {
+.btn-violet span:before, body .login-hold .login-page .login-container .input-details button span:before, body .register .container .register-body #register-form button span:before {
   width: 2px;
   height: 0%;
 }
 
-.btn-violet span:after, body .register .container .register-body #register-form button span:after {
+.btn-violet span:after, body .login-hold .login-page .login-container .input-details button span:after, body .register .container .register-body #register-form button span:after {
   height: 2px;
   width: 0%;
 }
 
-.btn-violet span:hover:before, body .register .container .register-body #register-form button span:hover:before {
+.btn-violet span:hover:before, body .login-hold .login-page .login-container .input-details button span:hover:before, body .register .container .register-body #register-form button span:hover:before {
   height: 100%;
 }
 
-.btn-violet span:hover:after, body .register .container .register-body #register-form button span:hover:after {
+.btn-violet span:hover:after, body .login-hold .login-page .login-container .input-details button span:hover:after, body .register .container .register-body #register-form button span:hover:after {
   width: 100%;
 }
 
@@ -265,7 +268,7 @@ body .register .container .register-body #register-form button span:after {
   --animate-repeat: 1;
 }
 
-.animate__animated {
+.animate__animated, body .login-hold.active .login-page {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-duration: var(--animate-duration);
@@ -274,89 +277,89 @@ body .register .container .register-body #register-form button span:after {
   animation-fill-mode: both;
 }
 
-.animate__animated.animate__infinite {
+.animate__animated.animate__infinite, body .login-hold.active .animate__infinite.login-page {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-.animate__animated.animate__repeat-1 {
+.animate__animated.animate__repeat-1, body .login-hold.active .animate__repeat-1.login-page {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   -webkit-animation-iteration-count: var(--animate-repeat);
   animation-iteration-count: var(--animate-repeat);
 }
 
-.animate__animated.animate__repeat-2 {
+.animate__animated.animate__repeat-2, body .login-hold.active .animate__repeat-2.login-page {
   -webkit-animation-iteration-count: 2;
   animation-iteration-count: 2;
   -webkit-animation-iteration-count: calc(var(--animate-repeat) * 2);
   animation-iteration-count: calc(var(--animate-repeat) * 2);
 }
 
-.animate__animated.animate__repeat-3 {
+.animate__animated.animate__repeat-3, body .login-hold.active .animate__repeat-3.login-page {
   -webkit-animation-iteration-count: 3;
   animation-iteration-count: 3;
   -webkit-animation-iteration-count: calc(var(--animate-repeat) * 3);
   animation-iteration-count: calc(var(--animate-repeat) * 3);
 }
 
-.animate__animated.animate__delay-1s {
+.animate__animated.animate__delay-1s, body .login-hold.active .animate__delay-1s.login-page {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
   -webkit-animation-delay: var(--animate-delay);
   animation-delay: var(--animate-delay);
 }
 
-.animate__animated.animate__delay-2s {
+.animate__animated.animate__delay-2s, body .login-hold.active .animate__delay-2s.login-page {
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
   -webkit-animation-delay: calc(var(--animate-delay) * 2);
   animation-delay: calc(var(--animate-delay) * 2);
 }
 
-.animate__animated.animate__delay-3s {
+.animate__animated.animate__delay-3s, body .login-hold.active .animate__delay-3s.login-page {
   -webkit-animation-delay: 3s;
   animation-delay: 3s;
   -webkit-animation-delay: calc(var(--animate-delay) * 3);
   animation-delay: calc(var(--animate-delay) * 3);
 }
 
-.animate__animated.animate__delay-4s {
+.animate__animated.animate__delay-4s, body .login-hold.active .animate__delay-4s.login-page {
   -webkit-animation-delay: 4s;
   animation-delay: 4s;
   -webkit-animation-delay: calc(var(--animate-delay) * 4);
   animation-delay: calc(var(--animate-delay) * 4);
 }
 
-.animate__animated.animate__delay-5s {
+.animate__animated.animate__delay-5s, body .login-hold.active .animate__delay-5s.login-page {
   -webkit-animation-delay: 5s;
   animation-delay: 5s;
   -webkit-animation-delay: calc(var(--animate-delay) * 5);
   animation-delay: calc(var(--animate-delay) * 5);
 }
 
-.animate__animated.animate__faster {
+.animate__animated.animate__faster, body .login-hold.active .animate__faster.login-page {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
   -webkit-animation-duration: calc(var(--animate-duration) / 2);
   animation-duration: calc(var(--animate-duration) / 2);
 }
 
-.animate__animated.animate__fast {
+.animate__animated.animate__fast, body .login-hold.active .animate__fast.login-page {
   -webkit-animation-duration: 0.8s;
   animation-duration: 0.8s;
   -webkit-animation-duration: calc(var(--animate-duration) * 0.8);
   animation-duration: calc(var(--animate-duration) * 0.8);
 }
 
-.animate__animated.animate__slow {
+.animate__animated.animate__slow, body .login-hold.active .animate__slow.login-page {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
   -webkit-animation-duration: calc(var(--animate-duration) * 2);
   animation-duration: calc(var(--animate-duration) * 2);
 }
 
-.animate__animated.animate__slower {
+.animate__animated.animate__slower, body .login-hold.active .animate__slower.login-page {
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
   -webkit-animation-duration: calc(var(--animate-duration) * 3);
@@ -364,7 +367,7 @@ body .register .container .register-body #register-form button span:after {
 }
 
 @media print, (prefers-reduced-motion: reduce) {
-  .animate__animated {
+  .animate__animated, body .login-hold.active .login-page {
     -webkit-animation-duration: 1ms !important;
     animation-duration: 1ms !important;
     -webkit-transition-duration: 1ms !important;
@@ -372,7 +375,7 @@ body .register .container .register-body #register-form button span:after {
     -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
   }
-  .animate__animated[class*=Out] {
+  .animate__animated[class*=Out], body .login-hold.active [class*=Out].login-page {
     opacity: 0;
   }
 }
@@ -1841,7 +1844,7 @@ body .register .container .register-body #register-form button span:after {
     transform: translate3d(0, 0, 0);
   }
 }
-.animate__fadeInDown {
+.animate__fadeInDown, body .login-hold.active .login-page {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
 }
@@ -2568,7 +2571,7 @@ body .register .container .register-body #register-form button span:after {
     animation-timing-function: ease-in;
   }
 }
-.animate__animated.animate__flip {
+.animate__animated.animate__flip, body .login-hold.active .animate__flip.login-page {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
   -webkit-animation-name: flip;
@@ -4037,6 +4040,7 @@ body .header-sub-container .user-item .login {
   font-size: 16px;
   margin-right: 30px;
   font-weight: 300;
+  cursor: pointer;
 }
 body .header-sub-container .user-item .register {
   font-size: 16px;
@@ -4455,4 +4459,105 @@ body .footer-container .store-location::before {
 }
 body .footer-container:nth-child(2) {
   background-color: #ececec;
+}
+body .login-hold {
+  z-index: 3;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 1200px;
+  width: 1400px;
+  transform: translateX(-700px);
+  backdrop-filter: blur(5px);
+  transition: all 10s;
+}
+body .login-hold .login-page {
+  position: absolute;
+  top: 100px;
+  width: 500px;
+  border: 1px solid var(--bg-button-primary);
+  border-radius: 10px;
+  background: var(--bg-button-grey);
+  box-shadow: 7px 7px 11px -6px #000000;
+}
+body .login-hold .login-page .login-container {
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+body .login-hold .login-page .login-container h3 {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--text-color-primary);
+  text-align: center;
+}
+body .login-hold .login-page .login-container #login_error {
+  color: var(--text-danger-1);
+  text-align: center;
+  margin-top: 10px;
+}
+body .login-hold .login-page .login-container .input-details {
+  width: 100%;
+}
+body .login-hold .login-page .login-container .input-details .input-detail {
+  margin: 20px 0;
+}
+body .login-hold .login-page .login-container .input-details .input-detail input {
+  width: 100%;
+  padding: 5px;
+  font-size: 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+body .login-hold .login-page .login-container .input-details .input-detail input:focus {
+  border: 0;
+  outline: none;
+  border-bottom: 3px solid #AE18E2;
+  box-shadow: 0px 0px 8px 5px rgba(174, 24, 226, 0.3);
+  border-radius: 4px;
+}
+body .login-hold .login-page .login-container .input-details button {
+  height: 50px;
+  width: 100%;
+  font-size: 24px;
+  color: var(--text-color-light);
+  background-color: #AE18E2;
+}
+body .login-hold .login-page .login-container .signup-hold {
+  text-align: center;
+  padding: 20px;
+  color: grey;
+}
+body .login-hold .login-page .login-container .signup-hold a {
+  margin-left: 20px;
+  text-align: right;
+  text-decoration: none;
+  font-weight: 500;
+}
+body .login-hold .login-page .login-container .signup-hold a:hover {
+  color: #fbfbfc;
+}
+body .login-hold .login-page .login-container .close_button {
+  position: absolute;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  font-weight: 700;
+  background-image: url(../../images/close.png);
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  cursor: pointer;
+}
+body .login-hold .login-page .login-container .close_button:hover {
+  background-image: url(../../images/close2.png);
+}
+body .login-hold.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

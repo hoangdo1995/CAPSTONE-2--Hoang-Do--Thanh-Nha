@@ -3,6 +3,7 @@
 @import '../Components/_component.scss';
 @import '../Layouts/_footer.scss';
 @import '../Layouts/_header.scss';
+@import './Layouts/login.scss';
 
 
 body {
@@ -156,7 +157,6 @@ body {
     .footer {
         @include footerComponent();
         font-size: 12px;
-
-
     }
+    @include loginComponent();
 }

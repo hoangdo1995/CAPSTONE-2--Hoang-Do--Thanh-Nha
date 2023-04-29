@@ -28,7 +28,7 @@
                             <img src="../images/shoppingIcon.png" alt="shoppingIcon">
                             <span>(1)</span>
                         </p>
-                        <p class="login">Login</p>
+                        <p class="login" onclick="changeStatePageLogin()">Login</p>
                         <a href="../pages/register.html" class="register">Register</a>
                     </div>
                 </div>
@@ -303,9 +303,40 @@
                 </div>
             </div>
         </div>
-
     </footer>
 
+    <!-- login page -->
+    <section class="login-hold" >
+        <div class="login-page">
+            <div class="login-container">
+                <h3>Login</h3>
+                <p id="login_error"></p>
+                <form   form action="" id="form_login">
+                    <div class="input-details">
+                        <div class="input-detail">
+                            <div class="input-tag">
+                                <p class="input-name">email</p>
+                                <p class="alert-notify" id="email-error"></p>
+                            </div>
+                            <input type="text" id="email_login" name="email">
+                        </div>
+                        <div class="input-detail">
+                            <div class="input-tag">
+                                <p class="input-name">password</p>
+                                <p class="alert-notify" id="password-error"></p>
+                            </div>
+                            <input type="password" id="password_login" name="password">
+                        </div>
+                        <button type="submit"><span>Sign in</span></button>
+                    </div>
+                </form>
+                <div class="signup-hold">Don't have an account <a href="../pages/register.html">Sign up</a></div>
+
+                <!-- //button close page login -->
+                <button class="close_button" onclick="changeStatePageLogin()"></button>
+            </div>
+        </div>
+    </section>
 
     <!-- javascripts -->
     <!-- axios cdn -->
@@ -314,9 +345,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"> </script>
     <!-- ApiConnector -->
     <script src="../javascripts/ApiConnector/connector.js" type="module"></script>
-    <script src="../javascripts/detailPage.js"></script>
+    <!-- xu ly login -->
+    <script src="../javascripts/Controller/loginController.js" type="module"></script>
     <!-- main javascripts -->
-    <script src="../javascripts/main.js" type="module"></script>
+    <script src="../javascripts/detailPage.js" type="module"></script>
 
 </body>
 
