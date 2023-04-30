@@ -3,16 +3,12 @@
 @import '../Components/_component.scss';
 @import '../Layouts/_footer.scss';
 @import '../Layouts/_header.scss';
-@import './Layouts/login.scss';
+@import '../Layouts/_login.scss';
 
 
 body {
 
-    .header{
-        @include headerComponent();
-    }
-
-    .carousel{}
+    @include headerComponent();
 
     .product{
         
@@ -22,13 +18,15 @@ body {
             display: flex;
             margin-bottom: 50px;
             @media only screen and (max-width: 768px){
-                padding-left: 65px;
+                // padding-left: 65px;
+                padding: 10px 20px;
+                flex-direction: column;
+                align-items: center;
             }
             @media only screen and (max-width: 567px){
                 display: unset;
             }
-         
-            // border: 1px solid red;
+
             .product-image{
                 background-color: #F8F8F8;
                 text-align: center;
@@ -37,14 +35,16 @@ body {
                 margin-right: 100px;
                 width: 30%;
                 border-radius: 5px;
-                border: 1px solid $c0-text-grey;
+                // border: 1px solid $c0-text-grey;
                 cursor: pointer;
                 img{
                     width: 100%;
                 }
                 @media only screen and (max-width: 768px){
-                    width: 40%;
-                    margin-right: 50px;
+                    width: 70%;
+                    margin-right: 0px;
+                    padding: 10px 20px;
+                    margin-bottom: 20px;
                 }
                 @media only screen and (max-width: 567px){
                     width: 80%;
@@ -53,9 +53,13 @@ body {
             }
             .product-detail{
                 width: 42%;
-                @media only screen and (max-width: 567px){
-                    width: 80%;
-                    margin: 15px auto;
+                // @media only screen and (max-width: 567px){
+                //     width: 80%;
+                //     margin: 15px auto;
+                // }
+                @media only screen and (max-width: 768px){
+                    width: 100%;
+                    padding: 0 50px;
                 }
                 .product-descriptions{
                     margin-bottom: 15px;
@@ -110,6 +114,8 @@ body {
                 }
 
                 .product-actions{
+                    display: flex;
+                    flex-direction: column;
                     .amounts{
                         margin-bottom: 15px;
                         display: flex;
@@ -165,18 +171,20 @@ body {
                             background-position: 100px;  
                             transition: all 0.5s;
                         }
+                        @media only screen and (max-width: 992px){
+                            width: 250px;;
+                        }
                         @media only screen and (max-width: 768px){
-                            margin-left: 20px;
                             font-size: 20px;
                             font-weight: 500;
-                            width: 50%;
+                            width: 150px;
+                            // width: 50%;
                             height: 5%;
                         }
                         @media only screen and (max-width: 567px){
-                            margin-left: 0px;
                             font-size: 20px;
                             font-weight: 500;
-                            width: 70%;
+                            // width: 70%;
                         }
                     }
                     @media only screen and (max-width: 768px){

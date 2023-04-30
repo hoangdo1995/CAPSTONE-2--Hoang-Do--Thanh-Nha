@@ -3,6 +3,7 @@
 @import '../Components/_component.scss';
 @import '../Layouts/_footer.scss';
 @import '../Layouts/_header.scss';
+@import '../Layouts/login.scss';
 
 @mixin tableStyle(){
     border: 1px solid white;
@@ -52,37 +53,47 @@ body {
                 color: $c0-text-primary;
                 border-bottom: 1px solid $c0-text-grey-sub;
             }
-            td {
-                @include tableStyle();
-                border-bottom: 1px solid $c0-text-grey-sub;
-                @include button();
-                a{
-                    text-decoration: none;
-                    color: $c0-text-primary;
-                }
-
-                .btn-view{
-                    background: #03a9f4;
-                    color: $c0-text-light;
-
-                    &:hover {
-                        box-shadow:
-                        7px 7px 20px 0px rgba(0, 0, 0, .2),
-                        4px 4px 5px 0px rgba(0, 0, 0, .3);
-                    transition: all 0.3s ease;
-                    }
-                }
-                .btn-delete{
-                    background: #e91e63;
-                    color: $c0-text-light;
-                    &:hover {
-                        box-shadow:
-                        7px 7px 20px 0px rgba(0, 0, 0, .2),
-                        4px 4px 5px 0px rgba(0, 0, 0, .3);
-                    transition: all 0.3s ease;
-                    }
-                }
-            }            
+            tbody{
+                tr{
+                    max-width: 30px;
+                    border: 1px solid black;
+                    td {
+                        @include tableStyle();
+                        border-bottom: 1px solid $c0-text-grey-sub;
+                        @include button();
+                        a{
+                            text-decoration: none;
+                            color: $c0-text-primary;
+                            img{
+                                height: 100px;
+                            }
+                        }
+        
+                        .btn-view{
+                            background: #03a9f4;
+                            color: $c0-text-light;
+        
+                            &:hover {
+                                box-shadow:
+                                7px 7px 20px 0px rgba(0, 0, 0, .2),
+                                4px 4px 5px 0px rgba(0, 0, 0, .3);
+                            transition: all 0.3s ease;
+                            }
+                        }
+                        .btn-delete{
+                            background: #e91e63;
+                            color: $c0-text-light;
+                            &:hover {
+                                box-shadow:
+                                7px 7px 20px 0px rgba(0, 0, 0, .2),
+                                4px 4px 5px 0px rgba(0, 0, 0, .3);
+                            transition: all 0.3s ease;
+                            }
+                        }
+                    } 
+                } 
+            }
+                      
         }
 
         .btn-pay{
@@ -105,4 +116,6 @@ body {
         @include footerComponent();
         font-size: 12px;
     }
+
+    @include loginComponent();
 }

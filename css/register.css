@@ -3999,10 +3999,6 @@ p {
   color: inherit;
 }
 
-body {
-  background-color: #000;
-  margin-bottom: 100px;
-}
 @media only screen and (max-width: 567px) {
   body {
     margin-bottom: 50px;
@@ -4010,6 +4006,7 @@ body {
 }
 body .header-sub-container {
   display: flex;
+  background-color: var(--text-color-primary);
   justify-content: space-between;
   padding: 8px;
 }
@@ -4017,62 +4014,52 @@ body .header-sub-container .logo {
   margin-left: 50px;
 }
 body .header-sub-container .logo img {
-  width: 150%;
-  cursor: pointer;
+  width: 116px;
+  height: 32px;
 }
 body .header-sub-container .user-item {
   display: flex;
   color: #fff;
   align-items: center;
   margin-right: 50px;
+  justify-content: space-between;
 }
 body .header-sub-container .user-item .shopping {
+  display: flex;
   font-size: 30px;
   margin-right: 15px;
   align-items: center;
   position: relative;
   text-decoration: none;
-  color: #fff;
+  color: inherit;
 }
 body .header-sub-container .user-item .shopping img {
   position: absolute;
-  width: 100%;
+  width: 31px;
+  height: 31px;
   top: 3px;
   left: -30px;
-  transition: all 0.5s;
 }
-body .header-sub-container .user-item .shopping img:hover {
-  transform: scale(1.2);
-  transition: all 0.5s;
+body .header-sub-container .user-item .shopping span {
+  text-decoration: none;
+  color: inherit;
 }
 body .header-sub-container .user-item .login {
   font-size: 16px;
+  margin-left: 30px;
   margin-right: 30px;
   font-weight: 300;
   cursor: pointer;
-  transition: all 0.5s;
-}
-body .header-sub-container .user-item .login:hover {
-  transform: scale(1.2);
-  transition: all 0.5s;
 }
 body .header-sub-container .user-item .register {
-  text-decoration: none;
-  color: #fff;
   font-size: 16px;
   font-weight: 300;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-body .header-sub-container .user-item .register:hover {
-  transform: scale(1.2);
-  transition: all 0.5s;
+  text-decoration: none;
+  color: inherit;
 }
 body .menu-item {
-  position: absolute;
   width: 100%;
   background-color: #fff;
-  margin-left: 50px;
 }
 body .menu-item .menu-container {
   margin: 10px;
@@ -4239,12 +4226,32 @@ body .footer-container {
   justify-content: space-between;
   padding: 40px 100px;
 }
+@media only screen and (max-width: 576px) {
+  body .footer-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  body .footer-container div:nth-of-type(3) {
+    margin-bottom: 0;
+  }
+  body .footer-container div:nth-of-type(1) {
+    margin-top: 0;
+  }
+}
 body .footer-container .get-help {
   width: 32%;
 }
 @media only screen and (max-width: 768px) {
   body .footer-container .get-help {
     width: 25%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  body .footer-container .get-help {
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 20px;
   }
 }
 body .footer-container .get-help h1 {
@@ -4260,6 +4267,11 @@ body .footer-container .get-help ul {
   font-size: 12px;
   margin-bottom: 5px;
 }
+@media only screen and (max-width: 576px) {
+  body .footer-container .get-help ul {
+    font-size: 18px;
+  }
+}
 body .footer-container .get-help ul a {
   text-decoration: none;
   color: #000;
@@ -4269,9 +4281,24 @@ body .footer-container .orders {
   position: relative;
   width: 25%;
 }
+@media only screen and (max-width: 576px) {
+  body .footer-container .orders {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+}
 @media only screen and (max-width: 768px) {
   body .footer-container .orders {
     width: 25%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  body .footer-container .orders {
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 20px;
   }
 }
 body .footer-container .orders h1 {
@@ -4286,6 +4313,11 @@ body .footer-container .orders ul {
   list-style: none;
   font-size: 12px;
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 576px) {
+  body .footer-container .orders ul {
+    font-size: 18px;
+  }
 }
 body .footer-container .orders ul a {
   text-decoration: none;
@@ -4307,13 +4339,33 @@ body .footer-container .orders::before {
     left: -15px;
   }
 }
+@media only screen and (max-width: 576px) {
+  body .footer-container .orders::before {
+    display: none;
+  }
+}
 body .footer-container .register {
   width: 32%;
   position: relative;
 }
+@media only screen and (max-width: 576px) {
+  body .footer-container .register {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+}
 @media only screen and (max-width: 768px) {
   body .footer-container .register {
     width: 25%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  body .footer-container .register {
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 20px;
   }
 }
 body .footer-container .register h1 {
@@ -4329,6 +4381,11 @@ body .footer-container .register ul {
   font-size: 12px;
   margin-bottom: 5px;
 }
+@media only screen and (max-width: 576px) {
+  body .footer-container .register ul {
+    font-size: 18px;
+  }
+}
 body .footer-container .register ul a {
   text-decoration: none;
   color: #000;
@@ -4337,6 +4394,12 @@ body .footer-container .register a {
   text-decoration: none;
   font-size: 12px;
   color: rgb(245, 134, 134);
+}
+@media only screen and (max-width: 576px) {
+  body .footer-container .register a {
+    width: 100%;
+    font-size: 18px;
+  }
 }
 body .footer-container .register::before {
   content: "";
@@ -4354,12 +4417,32 @@ body .footer-container .register::before {
     left: -15px;
   }
 }
+@media only screen and (max-width: 576px) {
+  body .footer-container .register::before {
+    display: none;
+  }
+}
 body .footer-container .email-signup {
   width: 32%;
+}
+@media only screen and (max-width: 576px) {
+  body .footer-container .email-signup {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
 }
 @media only screen and (max-width: 768px) {
   body .footer-container .email-signup {
     width: 25%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  body .footer-container .email-signup {
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 20px;
   }
 }
 body .footer-container .email-signup h1 {
@@ -4375,6 +4458,11 @@ body .footer-container .email-signup ul {
   font-size: 12px;
   margin-bottom: 5px;
 }
+@media only screen and (max-width: 576px) {
+  body .footer-container .email-signup ul {
+    font-size: 18px;
+  }
+}
 body .footer-container .email-signup ul a {
   text-decoration: none;
   color: #000;
@@ -4384,14 +4472,35 @@ body .footer-container .email-signup a {
   font-size: 12px;
   color: rgb(245, 134, 134);
 }
+@media only screen and (max-width: 576px) {
+  body .footer-container .email-signup a {
+    width: 100%;
+    font-size: 18px;
+  }
+}
 body .footer-container .gift-cards {
   width: 32%;
   position: relative;
   width: 25%;
 }
+@media only screen and (max-width: 576px) {
+  body .footer-container .gift-cards {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+}
 @media only screen and (max-width: 768px) {
   body .footer-container .gift-cards {
     width: 25%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  body .footer-container .gift-cards {
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 20px;
   }
 }
 body .footer-container .gift-cards h1 {
@@ -4407,6 +4516,11 @@ body .footer-container .gift-cards ul {
   font-size: 12px;
   margin-bottom: 5px;
 }
+@media only screen and (max-width: 576px) {
+  body .footer-container .gift-cards ul {
+    font-size: 18px;
+  }
+}
 body .footer-container .gift-cards ul a {
   text-decoration: none;
   color: #000;
@@ -4415,6 +4529,12 @@ body .footer-container .gift-cards a {
   text-decoration: none;
   font-size: 12px;
   color: rgb(245, 134, 134);
+}
+@media only screen and (max-width: 576px) {
+  body .footer-container .gift-cards a {
+    width: 100%;
+    font-size: 18px;
+  }
 }
 body .footer-container .gift-cards::before {
   content: "";
@@ -4432,13 +4552,33 @@ body .footer-container .gift-cards::before {
     left: -15px;
   }
 }
+@media only screen and (max-width: 576px) {
+  body .footer-container .gift-cards::before {
+    display: none;
+  }
+}
 body .footer-container .store-location {
   width: 32%;
   position: relative;
 }
+@media only screen and (max-width: 576px) {
+  body .footer-container .store-location {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+}
 @media only screen and (max-width: 768px) {
   body .footer-container .store-location {
     width: 25%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  body .footer-container .store-location {
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 20px;
   }
 }
 body .footer-container .store-location h1 {
@@ -4454,6 +4594,11 @@ body .footer-container .store-location ul {
   font-size: 12px;
   margin-bottom: 5px;
 }
+@media only screen and (max-width: 576px) {
+  body .footer-container .store-location ul {
+    font-size: 18px;
+  }
+}
 body .footer-container .store-location ul a {
   text-decoration: none;
   color: #000;
@@ -4462,6 +4607,12 @@ body .footer-container .store-location a {
   text-decoration: none;
   font-size: 12px;
   color: rgb(245, 134, 134);
+}
+@media only screen and (max-width: 576px) {
+  body .footer-container .store-location a {
+    width: 100%;
+    font-size: 18px;
+  }
 }
 body .footer-container .store-location::before {
   content: "";
@@ -4477,6 +4628,11 @@ body .footer-container .store-location::before {
   body .footer-container .store-location::before {
     height: 110%;
     left: -15px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  body .footer-container .store-location::before {
+    display: none;
   }
 }
 body .footer-container:nth-child(2) {
