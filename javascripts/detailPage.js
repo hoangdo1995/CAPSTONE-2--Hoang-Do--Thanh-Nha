@@ -138,7 +138,7 @@ window.onload = () =>{
         document.querySelector(".product .product-detail .product-price").innerHTML = productNow.price*productNow.amount + '$';
     }
     document.querySelector('.add-to-cards').onclick = ()=>{
-        cardList = getCardStorange();
+        let cardList = getCardStorange();
         cardList.push(productNow);
         console.log('cardList',cardList);
         setCardStorange(cardList);

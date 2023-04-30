@@ -6,7 +6,7 @@ export function getCardStorange(){
     }
     else{
         localStorage.setItem('cardList',[]);
-        return null;
+        return [];
     }
 }
 export function setCardStorange(cardList){
