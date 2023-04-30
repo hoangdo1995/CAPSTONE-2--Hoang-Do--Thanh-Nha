@@ -143,7 +143,7 @@ window.onload = () =>{
         console.log('cardList',cardList);
         setCardStorange(cardList);
         document.querySelector('.shopping span').innerHTML = `( ${cardList.length})`;
-        window.location.href = '../pages/ShoppingCart.html';
+        window.location.href = './pages/ShoppingCart.html';
     }
 }
 

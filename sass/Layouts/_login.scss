@@ -88,13 +88,13 @@
                     background-color: transparent;
                     font-size: $fs-3;
                     font-weight: $fw-bolder;
-                    background-image: url(../../images/close.png);
+                    background-image: url(../images/close.png);
                     width: 40px;
                     height: 40px;
                     background-size: contain;
                     cursor: pointer;
                     &:hover{
-                        background-image: url(../../images/close2.png);
+                        background-image: url(../images/close2.png);
                     }
                 }
     
