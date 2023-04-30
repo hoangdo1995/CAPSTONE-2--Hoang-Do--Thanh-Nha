@@ -4680,14 +4680,14 @@ body .login-hold .login-page .login-container .close_button {
   background-color: transparent;
   font-size: 30px;
   font-weight: 700;
-  background-image: url(../../images/close.png);
+  background-image: url(../images/close.png);
   width: 40px;
   height: 40px;
   background-size: contain;
   cursor: pointer;
 }
 body .login-hold .login-page .login-container .close_button:hover {
-  background-image: url(../../images/close2.png);
+  background-image: url(../images/close2.png);
 }
 body .login-hold.active {
   display: flex;
