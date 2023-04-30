@@ -8,7 +8,7 @@ import {
 import {getCardStorange,setCardStorange } from "./Controller/StorangeController.js";
 
 let cardList = getCardStorange();
-let productNow = new Product();
+window.productNow = new Product();
 productNow.amount = 1;
 productNow.size =['38'];
 
