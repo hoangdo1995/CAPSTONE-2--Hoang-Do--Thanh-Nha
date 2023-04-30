@@ -52,7 +52,8 @@ document.querySelector('#register-form').onsubmit = function () {
         }).then((result) => {
             let succesNotify = result.data.message;
             alert(succesNotify);
-            window.location.href = '../index.html';
+            // window.location.href = '../index.html';
+            changeStatePageLogin();
         }).catch((error) => {
             let errorNotify = error.response.data.message;
             document.querySelector('#email-error').innerHTML = errorNotify;

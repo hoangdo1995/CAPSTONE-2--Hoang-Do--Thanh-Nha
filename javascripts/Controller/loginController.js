@@ -34,7 +34,7 @@ document.querySelector('#form_login').onsubmit = (e) =>{
         document.querySelector('#login_error').innerHTML = result.data.message;
         setCookie('email',userLogin.email_login,365);
         setTimeout(()=>{
-            window.location.href = '../index.html'
+            changeStatePageLogin();
         },1000);
     }).catch(error=>{
         document.querySelector('#login_error').innerHTML = error.response.data.message;
