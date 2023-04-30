@@ -59,3 +59,7 @@ document.querySelector('#register-form').onsubmit = function () {
         });
     }
 }
+window.onload = ()=>{
+    let cardList = getCardStorange();
+    document.querySelector('.shopping span').innerHTML = `( ${cardList.length})`;
+};

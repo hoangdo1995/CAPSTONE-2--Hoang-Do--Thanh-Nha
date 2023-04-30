@@ -83,3 +83,8 @@ callApi('/product').then(function(result){
     document.querySelector('#product-body').innerHTML = html;
 
 });
+
+window.onload = ()=>{
+    let cardList = getCardStorange();
+    document.querySelector('.shopping span').innerHTML = `( ${cardList.length})`;
+};
