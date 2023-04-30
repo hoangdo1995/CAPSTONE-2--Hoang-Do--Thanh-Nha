@@ -14,7 +14,7 @@ export function setCardStorange(cardList){
     console.log('setitem');
 }
 
-(()=>{
+window.onload = ()=>{
     let cardList = getCardStorange();
     document.querySelector('.shopping span').innerHTML = `( ${cardList.length})`;
-})();
+};
