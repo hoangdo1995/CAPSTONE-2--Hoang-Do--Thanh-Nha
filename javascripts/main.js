@@ -5,6 +5,7 @@ import {
     Product
 } from "./Model/Product.js";
 
+import { getCardStorange } from "./Controller/StorangeController.js";
 
 callApi('/Product/getbyid?id=1').then(function (result) {
 

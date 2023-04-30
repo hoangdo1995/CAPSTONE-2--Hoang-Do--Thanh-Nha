@@ -1,6 +1,7 @@
 import {
     callApi
 } from "./ApiConnector/connector.js";
+import { getCardStorange } from "./Controller/StorangeController.js";
 (() => {
     let listInputTag = document.querySelectorAll('#register-form .input-tag');
     listInputTag.forEach((tag) => {
