@@ -87,5 +87,5 @@ callApi('/product').then(function(result){
 
 window.onload = ()=>{
     let cardList = getCardStorange();
-    document.querySelector('.shopping span').innerHTML = `( ${cardList.length})`;
+    document.querySelector('.shopping span').innerHTML = `(${cardList.length})`;
 };

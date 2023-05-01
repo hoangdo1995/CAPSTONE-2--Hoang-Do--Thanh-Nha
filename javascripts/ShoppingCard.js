@@ -22,7 +22,7 @@ let htmlCards = cardList.reduce((html,shoe)=>{
         </a>
     </td>
     <td>${shoe.amount}</td>
-    <td><a href="./detail.html">${shoe.name}</a></td>
+    <td><a href="./detail.html?id=${shoe.id}">${shoe.name}</a></td>
     <td>${shoe.price*shoe.amount}</td>
     <td>
         <!-- <button class="btn-view">Add</button> -->
