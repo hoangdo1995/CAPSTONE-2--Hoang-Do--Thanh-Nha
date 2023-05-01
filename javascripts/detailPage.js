@@ -20,7 +20,7 @@ callApi('/product').then(function (result) {
         <div class="product-item">
         <div class="item-container">
             <div class="item-infor">
-                <a href="./pages/detail.html?id=${product.id}">
+                <a href="#?id=${product.id}">
                     <div class="item-image">
                         <img src="${product.image}" alt="${product.name}">
                     </div>
@@ -29,7 +29,7 @@ callApi('/product').then(function (result) {
                 </a>
             </div>
             <div class="item-shopping">
-                <button><a href="./pages/detail.html?id=${product.id}"><span>Buy now</span></a></button>
+                <button><a href="#?id=${product.id}"><span>Buy now</span></a></button>
                 <div class="item-price">
                     <p class="price">$${product.price}</p>
                 </div>
